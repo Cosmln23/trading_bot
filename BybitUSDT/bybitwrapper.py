@@ -257,16 +257,18 @@ class _LinearConditional:
         reduce_only: bool = False,
         trigger_by: str = "LastPrice",
         close_on_trigger: bool = False,
+        trigger_direction: Optional[int] = None,
     ):
         if _HAS_UNIFIED:
             tif = self._map_time_in_force(time_in_force)
-            # Derive triggerDirection: 1 = rise to trigger, 2 = fall to trigger
-            try:
-                base_val = float(base_price)
-                stop_val = float(stop_px)
-                trigger_direction = 1 if stop_val >= base_val else 2
-            except Exception:
-                trigger_direction = None
+            # Use provided triggerDirection or derive from base_price/stop_px
+            if trigger_direction is None:
+                try:
+                    base_val = float(base_price)
+                    stop_val = float(stop_px)
+                    trigger_direction = 1 if stop_val >= base_val else 2
+                except Exception:
+                    trigger_direction = None
 
             params: Dict[str, Any] = {
                 "category": "linear",

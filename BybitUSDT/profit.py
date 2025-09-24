@@ -184,23 +184,112 @@ def cancel_stops(symbol, size, side):
 
 
 def set_tp(symbol, size, side):
-    prices = tp_calc(symbol, side)
-    cancel = client.LinearOrder.LinearOrder_cancel(symbol=symbol + "USDT").result()
-    order = client.LinearOrder.LinearOrder_new(side=prices[1], symbol=symbol + "USDT", order_type="Limit", qty=size,
-                                       price=prices[0], time_in_force="GoodTillCancel",
-                                       reduce_only=True, close_on_trigger=False).result()
-    return order
+    try:
+        prices = tp_calc(symbol, side)
+        current_price = fetch_ticker(symbol)
+        tp_price = prices[0]
+        tp_side = prices[1]
+
+        # Optional: Validate TP direction makes sense
+        if side == 'Buy':  # LONG position
+            # TP should be Sell Limit with price > current
+            if tp_side == 'Sell' and tp_price <= current_price:
+                print(f"[TP] skip {symbol}: LONG but TP price={tp_price} <= current={current_price}")
+                return {"ret_msg": "TP price validation failed - skipped"}
+        elif side == 'Sell':  # SHORT position
+            # TP should be Buy Limit with price < current
+            if tp_side == 'Buy' and tp_price >= current_price:
+                print(f"[TP] skip {symbol}: SHORT but TP price={tp_price} >= current={current_price}")
+                return {"ret_msg": "TP price validation failed - skipped"}
+
+        print(f"[TP] setting for {symbol}: side={tp_side}, price={tp_price}")
+
+        cancel = client.LinearOrder.LinearOrder_cancel(symbol=symbol + "USDT").result()
+        order = client.LinearOrder.LinearOrder_new(side=tp_side, symbol=symbol + "USDT", order_type="Limit", qty=size,
+                                           price=tp_price, time_in_force="GoodTillCancel",
+                                           reduce_only=True, close_on_trigger=False).result()
+        return order
+
+    except Exception as e:
+        error_msg = str(e)
+        print(f"[TP] error for {symbol}: {error_msg} - continue")
+        return {"ret_msg": f"TP error: {error_msg}"}
 
 def set_sl(symbol, size, side):
-    prices = fetch_stop_price(symbol, side)
-    orders = client.LinearConditional.LinearConditional_getOrders(symbol=symbol + "USDT", limit='5').result()
-    cancel_stops(symbol, size, side)
-    #print("Setting Stop Loss ", symbol)
-    order = client.LinearConditional.LinearConditional_new(order_type="Limit", side=prices[1], symbol=symbol+"USDT", qty=size, price=prices[0],
-                                                   base_price=prices[2], stop_px=prices[0], time_in_force="GoodTillCancel",
-                                                   reduce_only=False, trigger_by='LastPrice',
-                                                   close_on_trigger=False).result()
-    return order
+    try:
+        # Check for existing SL orders first (idempotency)
+        existing_orders = client.LinearConditional.LinearConditional_getOrders(symbol=symbol + "USDT", limit='5').result()
+        has_active_sl = False
+        try:
+            for order in existing_orders[0]['result']['data']:
+                if order['order_status'] not in ['Deactivated', 'Cancelled']:
+                    has_active_sl = True
+                    print(f"[SL] existing active SL found for {symbol}, skip setting new one")
+                    break
+        except (TypeError, KeyError):
+            pass
+
+        if has_active_sl:
+            return {"ret_msg": "SL already exists"}
+
+        prices = fetch_stop_price(symbol, side)
+        current_price = fetch_ticker(symbol)
+        trigger_price = prices[0]  # stop_px
+        sl_side = prices[1]        # opposite side for SL
+
+        # Determine correct triggerDirection based on Bybit v5 rules
+        trigger_direction = None
+
+        if side == 'Buy':  # LONG position
+            # SL should be Sell with triggerPrice < current (Falling = 2)
+            if sl_side == 'Sell' and trigger_price < current_price:
+                trigger_direction = 2  # Falling
+            else:
+                print(f"[SL] skip (direction/trigger mismatch) {symbol}: LONG but triggerPrice={trigger_price} >= current={current_price}")
+                return {"ret_msg": "SL direction mismatch - skipped"}
+
+        elif side == 'Sell':  # SHORT position
+            # SL should be Buy with triggerPrice > current (Rising = 1)
+            if sl_side == 'Buy' and trigger_price > current_price:
+                trigger_direction = 1  # Rising
+            else:
+                print(f"[SL] skip (direction/trigger mismatch) {symbol}: SHORT but triggerPrice={trigger_price} <= current={current_price}")
+                return {"ret_msg": "SL direction mismatch - skipped"}
+
+        if trigger_direction is None:
+            print(f"[SL] skip {symbol}: unable to determine triggerDirection")
+            return {"ret_msg": "SL triggerDirection error - skipped"}
+
+        # Cancel existing stops before placing new one
+        cancel_stops(symbol, size, side)
+
+        print(f"[SL] setting for {symbol}: side={sl_side}, triggerPrice={trigger_price}, direction={trigger_direction}")
+
+        order = client.LinearConditional.LinearConditional_new(
+            order_type="Limit",
+            side=sl_side,
+            symbol=symbol+"USDT",
+            qty=size,
+            price=trigger_price,
+            base_price=prices[2],
+            stop_px=trigger_price,
+            time_in_force="GoodTillCancel",
+            reduce_only=True,  # Fixed: SL should be reduceOnly=True
+            trigger_by='LastPrice',
+            close_on_trigger=False,
+            trigger_direction=trigger_direction  # Pass explicit trigger direction
+        ).result()
+
+        return order
+
+    except Exception as e:
+        # Handle error 110092 and other errors gracefully
+        error_msg = str(e)
+        if "110092" in error_msg:
+            print(f"[SL] error 110092 for {symbol}: {error_msg} - continue")
+        else:
+            print(f"[SL] error for {symbol}: {error_msg} - continue")
+        return {"ret_msg": f"SL error: {error_msg}"}
     #pprint(order)
 def fetch_positions():
 
