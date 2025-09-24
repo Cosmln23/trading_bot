@@ -69,21 +69,47 @@ def get_price_precision(symbol):
             return len(numbers) - 2
     return None
         
+def _extract_entry_price_by_side(entry_result, expected_side, fallback_ticker):
+    """
+    Selectează entry_price pe baza side-ului poziției.
+    entry_result: structura returnată de client.LinearPositions...().result()[0]
+    expected_side: 'Buy' sau 'Sell'
+    fallback_ticker: preț curent dacă nu găsim nimic valid
+    """
+    try:
+        positions = entry_result.get("result", []) or []
+        # Caută întâi poziția cu side așteptat
+        for pos in positions:
+            side_val = str(pos.get("side", ""))
+            if side_val.lower().startswith(str(expected_side).lower()[:1]) and float(pos.get("entry_price", 0) or 0) > 0:
+                return float(pos.get("entry_price"))
+        # Fallback: orice poziție cu entry_price > 0
+        for pos in positions:
+            if float(pos.get("entry_price", 0) or 0) > 0:
+                return float(pos.get("entry_price"))
+    except Exception:
+        pass
+    # Ultimul fallback: folosește prețul curent (ticker)
+    return float(fallback_ticker)
+        
 def tp_calc(symbol, side):
     entry_price_data = client.LinearPositions.LinearPositions_myPosition(symbol=symbol + 'USDT').result()
     for coin in coins:
         if coin['symbol'] == symbol:
             precision = get_price_precision(symbol)
+            # Preț curent pentru fallback
+            current_ticker = fetch_ticker(symbol)
+            entry_price = _extract_entry_price_by_side(entry_price_data[0], side, current_ticker)
+
             if side == 'Buy':
-                entry_price = float(entry_price_data[0]["result"][0]["entry_price"])
                 price = round(entry_price + (entry_price * (coin['take_profit_percent'] / 100)), precision)
-                side = 'Sell'
-                return price, side
+                next_side = 'Sell'
+                return price, next_side
             else:
-                side = 'Buy'
-                entry_price = float(entry_price_data[0]["result"][1]["entry_price"])
+                next_side = 'Buy'
+                # Păstrăm formula existentă din proiect pentru short TP
                 price = round(((entry_price * (coin['take_profit_percent'] / 100) - entry_price) * -1), precision)
-                return price, side
+                return price, next_side
         else:
             pass    
  
@@ -163,6 +189,7 @@ def set_tp(symbol, size, side):
     order = client.LinearOrder.LinearOrder_new(side=prices[1], symbol=symbol + "USDT", order_type="Limit", qty=size,
                                        price=prices[0], time_in_force="GoodTillCancel",
                                        reduce_only=True, close_on_trigger=False).result()
+    return order
 
 def set_sl(symbol, size, side):
     prices = fetch_stop_price(symbol, side)
@@ -173,7 +200,7 @@ def set_sl(symbol, size, side):
                                                    base_price=prices[2], stop_px=prices[0], time_in_force="GoodTillCancel",
                                                    reduce_only=False, trigger_by='LastPrice',
                                                    close_on_trigger=False).result()
-
+    return order
     #pprint(order)
 def fetch_positions():
 
@@ -184,8 +211,21 @@ def fetch_positions():
 
         if position != None:
             cancel_orders(symbol, position['size'], position['side'])
-            set_tp(symbol, position['size'], position['side'])
-            set_sl(symbol, position['size'], position['side'])
+            # Safe TP/SL logging wrapper
+            try:
+                print(f"[TP/SL] calc start symbol={symbol} side={position['side']} size={position['size']}")
+                tp_prices = tp_calc(symbol, position['side'])
+                print(f"[TP/SL] prices -> {tp_prices}")
+                r1 = set_tp(symbol, position['size'], position['side'])
+                print(f"[TP] resp -> {r1}")
+                r2 = set_sl(symbol, position['size'], position['side'])
+                print(f"[SL] resp -> {r2}")
+                print(f"[TP/SL] OK symbol={symbol}")
+            except Exception as e:
+                import traceback
+                print(f"[TP/SL] FAIL symbol={symbol} err={e}")
+                traceback.print_exc()
+                sleep(1.5)
         else:
             cancel_stops(symbol, 1, 'Buy')
 
@@ -193,7 +233,50 @@ def fetch_positions():
 load_jsons()
 
 print("Starting Take Profit & Order Manager")
+# Idempotency state: remember last side/size set time per symbol
+LAST_STATE = {}
+LAST_SET_TS = {}
+IDEMPOTENCY_COOLDOWN_SEC = 45
 while True:
     print("Checking for Positions.........")
-    fetch_positions()
+    # Idempotent wrapper around fetch_positions
+    try:
+        for coin in coins:
+            symbol = coin['symbol']
+            position = check_positions(symbol)
+            if position != None:
+                prev = LAST_STATE.get(symbol)
+                last_ts = LAST_SET_TS.get(symbol, 0)
+                unchanged = prev == (position['side'], position['size'])
+                recent = (time.time() - last_ts) < IDEMPOTENCY_COOLDOWN_SEC
+                if unchanged and recent:
+                    print(f"[TP/SL] already set recently for {symbol}, skip")
+                    continue
+
+                cancel_orders(symbol, position['size'], position['side'])
+                try:
+                    print(f"[TP/SL] calc start symbol={symbol} side={position['side']} size={position['size']}")
+                    tp_prices = tp_calc(symbol, position['side'])
+                    print(f"[TP/SL] prices -> {tp_prices}")
+                    r1 = set_tp(symbol, position['size'], position['side'])
+                    print(f"[TP] resp -> {r1}")
+                    r2 = set_sl(symbol, position['size'], position['side'])
+                    print(f"[SL] resp -> {r2}")
+                    print(f"[TP/SL] OK symbol={symbol}")
+                    LAST_STATE[symbol] = (position['side'], position['size'])
+                    LAST_SET_TS[symbol] = time.time()
+                except Exception as e:
+                    import traceback
+                    print(f"[TP/SL] FAIL symbol={symbol} err={e}")
+                    traceback.print_exc()
+                    sleep(1.5)
+            else:
+                cancel_stops(symbol, 1, 'Buy')
+                if symbol in LAST_STATE:
+                    del LAST_STATE[symbol]
+                    LAST_SET_TS.pop(symbol, None)
+    except Exception as e:
+        import traceback
+        print(f"[LOOP] FAIL err={e}")
+        traceback.print_exc()
     sleep(settings['cooldown'])

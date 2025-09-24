@@ -6,9 +6,11 @@ import time
 from ccxt.base.errors import ExchangeError
 import json
 import logging
-from unicorn_binance_websocket_api.unicorn_binance_websocket_api_manager import BinanceWebSocketApiManager
+from unicorn_binance_websocket_api.manager import BinanceWebSocketApiManager
 from prettyprinter import pprint
-import bybitwrapper
+import bybitwrapper as bybitwrapper
+from math import ceil
+from pybit.exceptions import InvalidRequestError
 
 with open('../settings.json', 'r') as fp:
     settings = json.load(fp)
@@ -154,9 +156,28 @@ def place_order(symbol, side, ticker, size):
         else:
             size = round(size, 3)
 
-    order = client.LinearOrder.LinearOrder_new(side=side, symbol=symbol+"USDT", order_type="Market", qty=size,
-                                       time_in_force="GoodTillCancel", reduce_only=False,
-                                       close_on_trigger=False).result()
+    # Ensure Bybit min notional (~5 USDT)
+    def ensure_min_notional(qty, last_price, min_usdt=5.2):
+        notional = float(qty) * float(last_price)
+        if notional >= float(min_usdt):
+            return qty, notional, False
+        adj_qty = ceil(float(min_usdt) / max(1e-9, float(last_price)))
+        return adj_qty, float(adj_qty) * float(last_price), True
+
+    size, notional, adjusted = ensure_min_notional(size, ticker)
+    print(f"[ORDER_CHECK] {symbol} {side} price={ticker} qty={size} notional={notional:.3f} adjusted={adjusted}")
+
+    try:
+        order = client.LinearOrder.LinearOrder_new(side=side, symbol=symbol+"USDT", order_type="Market", qty=size,
+                                           time_in_force="GoodTillCancel", reduce_only=False,
+                                           close_on_trigger=False).result()
+        print("[ORDER_OK]")
+    except InvalidRequestError as e:
+        print(f"[ORDER_FAIL] InvalidRequestError: {e}")
+        return
+    except Exception as e:
+        print(f"[ORDER_FAIL] Unexpected: {e}")
+        return
 
     #pprint(order)
 
@@ -287,3 +308,5 @@ if settings['check_leverage'].lower() == 'true':
         set_leverage(coin['symbol'])
 
 check_liquidations()
+
+
