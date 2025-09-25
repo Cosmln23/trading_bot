@@ -8,6 +8,66 @@ import logging
 from prettyprinter import pprint
 import bybitwrapper
 
+def execute_risk_commands():
+    """Execute risk commands from command center if available."""
+    try:
+        with open('../risk_commands.json', 'r') as f:
+            command = json.load(f)
+
+        command_mode = command.get('mode', 'NORMAL')
+        if command_mode in ['NORMAL', 'ALERT']:
+            return  # No action needed
+
+        print(f"[RISK-EXEC] Executing command: {command_mode} - {command.get('message', '')}")
+
+        # Execute position closing if commanded
+        if command.get('close_positions') and command.get('close_fraction'):
+            close_fraction = command['close_fraction']
+            print(f"[RISK-EXEC] Closing {close_fraction:.0%} of positions as commanded")
+
+            # Get all symbols from coins.json to close
+            for coin in coins:
+                symbol = coin['symbol']
+                position = check_positions(symbol)
+                if position and position['size'] > 0:
+                    try:
+                        # Calculate quantity to close
+                        close_qty = float(position['size']) * close_fraction
+                        if close_qty > 0:
+                            # Determine opposite side for closing
+                            close_side = 'Sell' if position['side'] == 'Buy' else 'Buy'
+
+                            # Close position with reduceOnly market order
+                            print(f"[RISK-CLOSE] {symbol} {close_side} {close_qty} (reduceOnly)")
+                            close_order = client.LinearOrder.LinearOrder_new(
+                                side=close_side,
+                                symbol=symbol + "USDT",
+                                order_type="Market",
+                                qty=close_qty,
+                                reduce_only=True,
+                                time_in_force="IOC"
+                            ).result()
+                            print(f"[RISK-CLOSE] {symbol} executed: {close_order.get('ret_msg', 'OK')}")
+                    except Exception as e:
+                        print(f"[RISK-CLOSE] Error closing {symbol}: {e}")
+
+        # Cancel all orders if commanded
+        if command.get('cancel_all_orders'):
+            print(f"[RISK-EXEC] Cancelling all orders as commanded")
+            for coin in coins:
+                symbol = coin['symbol']
+                try:
+                    cancel_orders(symbol, 1, 'Buy')  # Use existing function
+                    cancel_stops(symbol, 1, 'Buy')   # Use existing function
+                except Exception as e:
+                    print(f"[RISK-CANCEL] Error cancelling {symbol}: {e}")
+
+    except (FileNotFoundError, json.JSONDecodeError, KeyError):
+        # No command file or invalid - continue normally
+        pass
+    except Exception as e:
+        print(f"[RISK-EXEC] Error executing commands: {e}")
+
 with open('../settings.json', 'r') as fp:
     settings = json.load(fp)
 fp.close()
@@ -328,6 +388,9 @@ LAST_SET_TS = {}
 IDEMPOTENCY_COOLDOWN_SEC = 45
 while True:
     print("Checking for Positions.........")
+    # Execute risk commands from command center BEFORE processing positions
+    execute_risk_commands()
+
     # Idempotent wrapper around fetch_positions
     try:
         for coin in coins:

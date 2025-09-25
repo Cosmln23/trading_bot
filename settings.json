@@ -1,8 +1,7 @@
 {
   "exchange": "bybit",
-  "key": "key-here",
-  "secret": "secret-here",
+  "key": "KnVmXIzojTX5fqMv1H",
+  "secret": "RFYp74r21OvddRYgB6zhbn034FuEqYgiPnRV",
   "check_leverage": "false",
-  "cooldown": 0.25,
+  "cooldown": 0.25
 }
-

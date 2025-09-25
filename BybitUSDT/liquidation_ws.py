@@ -12,6 +12,32 @@ import bybitwrapper as bybitwrapper
 from math import ceil
 from pybit.exceptions import InvalidRequestError
 
+def check_risk_commands():
+    """Check risk commands from command center."""
+    try:
+        with open('../risk_commands.json', 'r') as f:
+            command = json.load(f)
+
+        # Check if new entries are allowed
+        allow_entries = command.get('allow_new_entries', True)
+
+        # Execute cancel orders if commanded
+        if command.get('cancel_all_orders'):
+            command_mode = command.get('mode', 'UNKNOWN')
+            print(f'[RISK-COMMAND] Cancel all orders commanded by {command_mode} mode')
+            # Cancel will be handled by the command itself through profit.py
+            # Just block new entries here
+
+        if not allow_entries:
+            mode = command.get('mode', 'UNKNOWN')
+            message = command.get('message', 'Risk management active')
+            print(f'[RISK-BLOCK] New entries disabled by {mode}: {message}')
+
+        return allow_entries
+
+    except (FileNotFoundError, json.JSONDecodeError, KeyError):
+        return True  # Default: allow if no command file or invalid
+
 with open('../settings.json', 'r') as fp:
     settings = json.load(fp)
 fp.close()
@@ -142,6 +168,11 @@ def set_leverage(symbol):
 
 
 def place_order(symbol, side, ticker, size):
+    # Check risk commands before placing new orders
+    if not check_risk_commands():
+        print(f'[RISK-GUARD] New entries disabled - skipping {symbol} {side} order')
+        return
+
     print('*****************************************************')
     print(symbol, side, " Entry Found!! Placing new order!!")
     print('*****************************************************')
