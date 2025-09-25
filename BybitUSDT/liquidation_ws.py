@@ -1,5 +1,6 @@
 import ccxt
 import requests
+import os
 from datetime import datetime
 from time import sleep
 import time
@@ -37,6 +38,38 @@ def check_risk_commands():
 
     except (FileNotFoundError, json.JSONDecodeError, KeyError):
         return True  # Default: allow if no command file or invalid
+
+def check_panic_trading_enabled():
+    """Check if panic button has disabled trading."""
+    try:
+        # Check for panic lock file
+        panic_lock_path = '../state/panic.lock'
+        if os.path.exists(panic_lock_path):
+            with open(panic_lock_path, 'r') as f:
+                data = json.load(f)
+                if data.get('panic_tripped', False):
+                    return False
+
+        # Check for trading disabled flag
+        if os.path.exists('../trading_disabled.flag'):
+            return False
+
+        # Check panic server status via HTTP
+        try:
+            import requests
+            response = requests.get('http://127.0.0.1:8787/healthz', timeout=1)
+            if response.status_code == 200:
+                health = response.json()
+                if not health.get('trading_enabled', True):
+                    return False
+        except:
+            pass  # If panic server is down, continue trading
+
+        return True
+
+    except Exception as e:
+        print(f"[PANIC-CHECK] Error checking panic status: {e}")
+        return True  # Default to allowing trading if check fails
 
 with open('../settings.json', 'r') as fp:
     settings = json.load(fp)
@@ -171,6 +204,11 @@ def place_order(symbol, side, ticker, size):
     # Check risk commands before placing new orders
     if not check_risk_commands():
         print(f'[RISK-GUARD] New entries disabled - skipping {symbol} {side} order')
+        return
+
+    # Check panic button system integration
+    if not check_panic_trading_enabled():
+        print(f'[PANIC] Trading disabled by panic button - skipping {symbol} {side} order')
         return
 
     print('*****************************************************')

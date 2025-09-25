@@ -1,0 +1,42 @@
+# Panic Button System Dependencies
+# Install with: pip install -r requirements_panic.txt
+
+# Core web framework for HTTP server
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# Async HTTP client for Telegram alerts
+aiohttp>=3.9.0
+
+# YAML configuration parsing
+pyyaml>=6.0
+
+# JSON handling (built-in, but listed for clarity)
+# json - built-in module
+
+# Data classes (Python 3.7+, built-in)
+# dataclasses - built-in module
+
+# Path handling (Python 3.4+, built-in)
+# pathlib - built-in module
+
+# Asyncio (Python 3.7+, built-in)
+# asyncio - built-in module
+
+# Time utilities (built-in)
+# time - built-in module
+# datetime - built-in module
+
+# Type hints (Python 3.5+, built-in for newer versions)
+typing-extensions>=4.0.0
+
+# Optional: MCP server integration (if using external MCP)
+# mcp>=0.1.0  # Uncomment if using external MCP server
+
+# Note: Existing dependencies from your bot (bybitwrapper, ccxt) are used
+# Make sure these are already installed:
+# - bybitwrapper (your existing Bybit wrapper)
+# - ccxt (for additional exchange support)
+# - requests (for HTTP requests)
+# - pandas (if used by your existing bot)
+# - numpy (if used by your existing bot)

@@ -1,0 +1,40 @@
+# Panic Button Configuration
+# Telegram Alert Settings
+alert:
+  channel: telegram
+  telegram:
+    bot_token: "7062299476:AAHApo6HtDYcAxYLS_9FtzcpBNKJLx2XfAw"
+    chat_id: "8463377385"
+
+# Lock and State Management
+lock:
+  backend: file
+  file_path: "state/panic.lock"
+
+# Verification Settings
+verify:
+  timeout_sec: 120      # Maximum time to wait for complete flatten
+  poll_ms: 200          # How often to check positions/orders (milliseconds)
+  max_retries: 10       # Maximum retry attempts per operation
+
+# HTTP Server Settings
+http:
+  port: 8787
+  host: "127.0.0.1"     # Localhost only for security
+  allowlist:
+    - "127.0.0.1"
+
+# Rate Limit Handling
+backoff:
+  initial_ms: 100       # Initial backoff delay
+  max_ms: 5000         # Maximum backoff delay
+  multiplier: 2.0       # Backoff multiplier
+
+# Symbols Scope
+symbols:
+  scope: "open_positions_only"  # Options: "all" or "open_positions_only"
+
+# Logging
+logging:
+  level: "INFO"
+  file: "panic/logs/panic.log"

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-09-25T11:23:28.549280",
+  "mode": "NORMAL",
+  "utilization": 0.0,
+  "total_equity": 19.38662178,
+  "used_im": 0.0,
+  "dry_run": false,
+  "allow_new_entries": true,
+  "cancel_all_orders": false,
+  "close_positions": false,
+  "priority": "NONE",
+  "message": "Normal trading - All systems operational"
+}
