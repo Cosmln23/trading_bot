@@ -68,12 +68,15 @@ class TelegramBotControl:
                     elif 'profit.py' in line:
                         pid = line.split()[1]
                         processes["profit"].append(pid)
-                    elif 'liquidation' in line:
+                    elif 'liquidation_ws.py' in line or 'liquidation.py' in line:
                         pid = line.split()[1]
                         processes["liquidation"].append(pid)
                     elif 'panic_server' in line:
                         pid = line.split()[1]
                         processes["panic_server"].append(pid)
+                    elif 'telegram_bot_control.py' in line:
+                        # Don't kill the telegram control bot itself
+                        pass
 
         except Exception as e:
             print(f"[CONTROL] Error getting processes: {e}")
