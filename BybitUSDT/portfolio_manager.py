@@ -7,6 +7,7 @@ import json
 import time
 import os
 import statistics
+import math
 import aiohttp
 import asyncio
 from datetime import datetime, timezone
@@ -365,37 +366,80 @@ def place_buy_order(client, cfg: Dict, symbol: str, price: float) -> bool:
 
 
 def place_sell_order(client, symbol: str, qty: float, reason: str) -> bool:
-    """Place market sell order (reduceOnly) with qty precision fixes."""
+    """Place reduceOnly market order that truly reduces the open side.
+    Handles hedge mode via positionIdx and floors quantity to the symbol step.
+    """
     try:
+        # Fetch current position sides to decide close side and available size
+        long_size = 0.0
+        short_size = 0.0
+        try:
+            pos = client._session.get_positions(category="linear", symbol=f"{symbol}USDT")
+            if pos.get('retCode') == 0:
+                for p in (pos.get('result', {}) or {}).get('list', []) or []:
+                    side = str(p.get('side', '')).lower()
+                    size = float(p.get('size') or 0)
+                    if size <= 0:
+                        continue
+                    if side == 'buy':
+                        long_size += size
+                    elif side == 'sell':
+                        short_size += size
+        except Exception:
+            pass
+
+        if long_size <= 0 and short_size <= 0:
+            print(f"[SELL_SKIP] {symbol}: no open position to reduce")
+            return False
+
+        # Determine which side to reduce
+        if long_size > 0:
+            close_side = "Sell"
+            available = long_size
+            position_idx = 1  # long
+        else:
+            close_side = "Buy"
+            available = short_size
+            position_idx = 2  # short
+
+        # Quantity step constraints
         qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G']
         qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL']
         qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO']
         qty_step_100_symbols = ['1000BONK', 'AKE', '1000PEPE']
 
+        # Floor to symbol step and ensure <= available
+        q = float(qty)
         if symbol in qty_step_01_symbols:
-            qty = round(qty, 1)
+            q = math.floor(min(q, available) * 10) / 10.0
         elif symbol in qty_step_1_symbols:
-            qty = int(round(qty))
+            q = math.floor(min(q, available))
         elif symbol in qty_step_10_symbols:
-            qty = int(round(qty / 10) * 10)
+            q = math.floor(min(q, available) / 10) * 10
         elif symbol in qty_step_100_symbols:
-            qty = int(round(qty / 100) * 100)
+            q = math.floor(min(q, available) / 100) * 100
         else:
-            qty = round(qty, 3)
+            # default 0.001 step: floor to 3 decimals
+            q = math.floor(min(q, available) * 1000) / 1000.0
+
+        if q <= 0:
+            print(f"[SELL_SKIP] {symbol}: qty after step-floor is 0 (available={available:.6g})")
+            return False
 
         order_link_id = f"PM-{symbol}-{int(time.time())}"
         result = client._session.place_order(
             category="linear",
             symbol=f"{symbol}USDT",
-            side="Sell",
+            side=close_side,
             orderType="Market",
-            qty=str(qty),
+            qty=str(q),
             timeInForce="IOC",
             reduceOnly=True,
+            positionIdx=position_idx,
             orderLinkId=order_link_id,
         )
         if result.get('retCode') == 0:
-            print(f"[SELL] {symbol}: qty={qty} reason={reason}")
+            print(f"[SELL] {symbol}: qty={q} reason={reason} (side={close_side}, idx={position_idx})")
             return True
         print(f"[SELL_FAIL] {symbol}: {result.get('retMsg')}")
         return False
@@ -595,7 +639,7 @@ def main():
                     f"💰 Budget used: ${used_budget:.0f}/${effective_budget:.0f}\n"
                     f"⏰ Next scan: {next_scan.strftime('%H:%M:%S')} (in {scan_interval // 60} min)"
                 )
-                send_telegram_sync(scheduler_msg)
+                # Do not send scheduler summary to Telegram; only BUY/SELL events notify
 
                 last_scan_time = current_time
                 print(f"⏰ [SCHEDULER] Next scan at {next_scan.strftime('%H:%M:%S')}")

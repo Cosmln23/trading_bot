@@ -4,7 +4,7 @@ import os
 from datetime import datetime
 from time import sleep
 import time
-from ccxt.base.errors import ExchangeError
+from ccxt.base.errors import ExchangeError, RequestTimeout
 import json
 import logging
 from unicorn_binance_websocket_api.manager import BinanceWebSocketApiManager
@@ -93,6 +93,10 @@ binance.load_markets()
 client = bybitwrapper.bybit(test=False, api_key=settings['key'], api_secret=settings['secret'])
 
 
+# Cache for last known prices to improve resilience on temporary data outages
+PRICE_CACHE = {}
+
+
 def load_jsons():
     #print("Checking Settings")
     with open('../coins.json', 'r') as fp:
@@ -102,19 +106,58 @@ def load_jsons():
         settings = json.load(fp)
     fp.close()
 
+def _fetch_binance_ticker_safe(symbol_pair: str, retries: int = 2, backoff: float = 0.5):
+    """Safely fetch ticker from Binance with simple retry/backoff."""
+    for attempt in range(retries + 1):
+        try:
+            return binance.fetch_ticker(symbol_pair)
+        except Exception as e:
+            # Handle transient issues; exponential backoff
+            try:
+                time.sleep(backoff)
+            except Exception:
+                pass
+            backoff = min(backoff * 2, 4.0)
+    return None
+
+
 def fetch_vwap(symbol):
     global longwap, shortwap
     tickerSymbol = symbol + '/USDT'
-    tickerDump = binance.fetch_ticker(tickerSymbol)
-    vwap = tickerDump['vwap']
+    tickerDump = _fetch_binance_ticker_safe(tickerSymbol)
+
+    vwap = None
+    if tickerDump is not None:
+        vwap = tickerDump.get('vwap') or tickerDump.get('average') or tickerDump.get('last')
+
+    # Fallback to Bybit last price if Binance not available
+    if not vwap:
+        try:
+            t = client._session.get_tickers(category="linear", symbol=f"{symbol}USDT")
+            if t.get('retCode') == 0:
+                lst = (t.get('result', {}) or {}).get('list', [])
+                if lst:
+                    vwap = float(lst[0].get('lastPrice') or 0)
+        except Exception:
+            vwap = None
+
+    # As last resort, use cached price
+    if not vwap:
+        vwap = PRICE_CACHE.get(symbol)
+
+    if not vwap:
+        # No data available; return neutral offsets so caller can skip
+        print(f"[VWAP_ERR] No VWAP/price for {symbol}; skipping event")
+        return 0.0, 0.0, 0.0
+
+    # Compute offsets
     for coin in coins:
         if coin['symbol'] == symbol:
             longwap = round(vwap - (vwap * (coin['long_vwap_offset'] / 100)), 4)
             shortwap = round(vwap + (vwap * (coin['short_vwap_offset'] / 100)), 4)
-        else:
-            pass
+            break
 
-    return vwap, longwap, shortwap
+    return float(vwap), float(longwap), float(shortwap)
 
 def fetch_lickval(symbol):
     for coin in coins:
@@ -174,9 +217,39 @@ def check_positions(symbol):
         sleep(5)
 
 def fetch_ticker(symbol):
-    tickerDump = binance.fetch_ticker(symbol + '/USDT')
-    ticker = float(tickerDump['last'])
-    return ticker
+    """Get robust last price with retry + Bybit fallback + cache."""
+    # Try Binance (with retry)
+    tickerDump = _fetch_binance_ticker_safe(symbol + '/USDT')
+    if tickerDump is not None:
+        try:
+            price = float(tickerDump.get('last') or 0)
+            if price > 0:
+                PRICE_CACHE[symbol] = price
+                return price
+        except Exception:
+            pass
+
+    # Fallback to Bybit
+    try:
+        t = client._session.get_tickers(category="linear", symbol=f"{symbol}USDT")
+        if t.get('retCode') == 0:
+            lst = (t.get('result', {}) or {}).get('list', [])
+            if lst:
+                price = float(lst[0].get('lastPrice') or 0)
+                if price > 0:
+                    PRICE_CACHE[symbol] = price
+                    return price
+    except Exception:
+        pass
+
+    # Use cached price if available
+    if symbol in PRICE_CACHE:
+        print(f"[PRICE_FALLBACK] Using cached price for {symbol}: {PRICE_CACHE[symbol]}")
+        return PRICE_CACHE[symbol]
+
+    # No price available
+    print(f"[PRICE_ERR] Could not fetch price for {symbol}; skipping event")
+    return 0.0
 
 def fetch_order_size(symbol):
     global qty
@@ -405,6 +478,8 @@ def check_liquidations():
 
                         vwaps = fetch_vwap(symbol)
                         ticker = fetch_ticker(symbol)
+                        if ticker <= 0:
+                            continue
                         lick_val = fetch_lickval(symbol)
 
                         if ticker < vwaps[1] and side == 'SELL' and lick_size > lick_val:

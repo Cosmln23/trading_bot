@@ -13,6 +13,8 @@ import os
 import time
 from typing import Dict, Any
 from datetime import datetime
+from pathlib import Path
+import sys
 
 class TelegramBotControl:
     """Handles Telegram commands for bot control."""
@@ -49,7 +51,8 @@ class TelegramBotControl:
             "risk_guard": [],
             "profit": [],
             "liquidation": [],
-            "panic_server": []
+            "panic_server": [],
+            "portfolio": []
         }
 
         try:
@@ -71,6 +74,9 @@ class TelegramBotControl:
                     elif 'liquidation_ws.py' in line or 'liquidation.py' in line:
                         pid = line.split()[1]
                         processes["liquidation"].append(pid)
+                    elif 'portfolio_manager.py' in line:
+                        pid = line.split()[1]
+                        processes["portfolio"].append(pid)
                     elif 'panic_server' in line:
                         pid = line.split()[1]
                         processes["panic_server"].append(pid)
@@ -202,6 +208,105 @@ class TelegramBotControl:
         status = self.get_status_report()
         await self.send_message(status)
 
+    def _init_bybit_client(self):
+        """Initialize Bybit client via project settings and bybitwrapper."""
+        try:
+            # Add project paths to import bybitwrapper
+            root = Path(__file__).resolve().parent.parent
+            bybit_dir = root / 'BybitUSDT'
+            if str(bybit_dir) not in sys.path:
+                sys.path.insert(0, str(bybit_dir))
+
+            import bybitwrapper  # type: ignore
+
+            # Load API keys
+            settings_path = root / 'settings.json'
+            with open(settings_path, 'r') as f:
+                settings = json.load(f)
+
+            client = bybitwrapper.bybit(
+                test=False,
+                api_key=settings['key'],
+                api_secret=settings['secret']
+            )
+            return client
+        except Exception as e:
+            print(f"[CONTROL] Bybit client init failed: {e}")
+            return None
+
+    async def handle_close_all_command(self):
+        """Close all open positions across symbols.
+        Prefer panic server if available; fallback to direct Bybit reduce-only orders.
+        """
+        await self.send_message("🚨 <b>CLOSE ALL POSITIONS</b>\n\nAttempting to flatten all positions...")
+
+        # 1) Try Panic Server
+        try:
+            async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=5)) as session:
+                resp = await session.post('http://127.0.0.1:8787/panic')
+                if resp.status == 200:
+                    data = await resp.json()
+                    await self.send_message("✅ <b>ALL POSITIONS CLOSED via Panic Server</b>\n🔒 Trading disabled.")
+                    return
+                else:
+                    txt = await resp.text()
+                    print(f"[CONTROL] Panic server close failed: {resp.status} {txt}")
+        except Exception as e:
+            print(f"[CONTROL] Panic server not available: {e}")
+
+        # 2) Fallback: direct close via Bybit
+        client = self._init_bybit_client()
+        if client is None:
+            await self.send_message("❌ Could not initialize Bybit client for fallback close.")
+            return
+
+        try:
+            resp = client._session.get_positions(category="linear")
+            if resp.get('retCode') != 0:
+                await self.send_message(f"❌ Positions API error: {resp.get('retMsg')}")
+                return
+
+            closed = 0
+            errors = 0
+            for pos in (resp.get('result', {}) or {}).get('list', []) or []:
+                size = float(pos.get('size') or 0)
+                if size <= 0:
+                    continue
+                symbol = pos.get('symbol', '')
+                side = str(pos.get('side','')).lower()
+                # Determine close
+                if side == 'buy':
+                    close_side = 'Sell'
+                    idx = 1
+                else:
+                    close_side = 'Buy'
+                    idx = 2
+
+                try:
+                    r = client._session.place_order(
+                        category="linear",
+                        symbol=symbol,
+                        side=close_side,
+                        orderType="Market",
+                        qty=str(size),
+                        timeInForce="IOC",
+                        reduceOnly=True,
+                        positionIdx=idx
+                    )
+                    if r.get('retCode') == 0:
+                        closed += 1
+                    else:
+                        errors += 1
+                        print(f"[CONTROL] Close fail {symbol}: {r.get('retMsg')}")
+                except Exception as e:
+                    errors += 1
+                    print(f"[CONTROL] Close exception {symbol}: {e}")
+
+            msg = f"✅ <b>CLOSE ALL COMPLETED</b>\n✔️ Closed: {closed}\n❗ Errors: {errors}"
+            await self.send_message(msg)
+        except Exception as e:
+            await self.send_message(f"❌ Exception during close-all: {e}")
+
     async def listen_for_commands(self):
         """Listen for Telegram commands and respond."""
         last_update_id = 0
@@ -248,12 +353,17 @@ class TelegramBotControl:
                                 print(f"[TELEGRAM] Status command received from chat {chat_id}")
                                 await self.handle_status_command()
 
+                            elif text in ["/close", "/closeall", "/close_all", "close all", "closeall", "/flatten", "flatten"]:
+                                print(f"[TELEGRAM] Close-all command received from chat {chat_id}")
+                                await self.handle_close_all_command()
+
                             elif text in ["/help", "/start", "help"]:
                                 help_msg = """🤖 <b>Bot Control Commands</b>
 
 <b>Available Commands:</b>
 • /kill or /stop - Kill all trading bots
 • /status or /check - Check bot status
+• /close - Close all positions (panic fallback)
 • /help - Show this help
 
 <b>Emergency Usage:</b>
