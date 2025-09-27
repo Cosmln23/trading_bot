@@ -201,6 +201,20 @@ def set_leverage(symbol):
 
 
 def place_order(symbol, side, ticker, size):
+    # Check if symbol is in Portfolio-Momentum system to avoid conflicts
+    try:
+        from pathlib import Path
+        import json
+        portfolio_state_path = Path("portfolio_state.json")
+        if portfolio_state_path.exists():
+            with open(portfolio_state_path, 'r') as f:
+                pm_state = json.load(f)
+                if symbol in pm_state:
+                    print(f"[SKIP WL] {symbol} is in Portfolio-Momentum system. Skipping Win/Loss entry.")
+                    return
+    except Exception as e:
+        print(f"[CONFLICT_CHECK] Error checking PM state: {e}")
+
     # Check risk commands before placing new orders
     if not check_risk_commands():
         print(f'[RISK-GUARD] New entries disabled - skipping {symbol} {side} order')
@@ -217,13 +231,21 @@ def place_order(symbol, side, ticker, size):
 
     with open('../ordersize.json', 'r') as fp:
         ordersize = json.load(fp)
-    fp.close()
 
-    for coin in ordersize:
-        if size < coin[symbol]:
-            size = coin[symbol]
+    override_size = None
+    for entry in ordersize:
+        if symbol in entry:
+            override_size = entry[symbol]
+            break
+
+    if override_size is not None:
+        if size < override_size:
+            size = override_size
         else:
             size = round(size, 3)
+    else:
+        print(f"[ORDER_WARN] No preset ordersize for {symbol}; using calculated size")
+        size = round(size, 3)
 
     # Ensure Bybit min notional (~5 USDT)
     def ensure_min_notional(qty, last_price, min_usdt=5.2):
@@ -234,12 +256,42 @@ def place_order(symbol, side, ticker, size):
         return adj_qty, float(adj_qty) * float(last_price), True
 
     size, notional, adjusted = ensure_min_notional(size, ticker)
+
+    # Fix quantity precision based on qtyStep requirements
+    qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND']  # qtyStep=0.1
+    qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA']  # qtyStep=1
+    qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS']  # qtyStep=10
+    qty_step_100_symbols = ['1000BONK']  # qtyStep=100
+
+    if symbol in qty_step_01_symbols:
+        # Round to 1 decimal place (qtyStep=0.1)
+        size = round(float(size), 1)
+        notional = float(size) * float(ticker)
+        print(f"[QTY_FIX] {symbol} rounded to 1 decimal: {size}")
+    elif symbol in qty_step_1_symbols:
+        # Round to integer (qtyStep=1)
+        size = int(round(float(size)))
+        notional = float(size) * float(ticker)
+        print(f"[QTY_FIX] {symbol} rounded to integer: {size}")
+    elif symbol in qty_step_10_symbols:
+        # Round to multiple of 10 (qtyStep=10)
+        size = int(round(float(size) / 10) * 10)
+        notional = float(size) * float(ticker)
+        print(f"[QTY_FIX] {symbol} rounded to multiple of 10: {size}")
+    elif symbol in qty_step_100_symbols:
+        # Round to multiple of 100 (qtyStep=100)
+        size = int(round(float(size) / 100) * 100)
+        notional = float(size) * float(ticker)
+        print(f"[QTY_FIX] {symbol} rounded to multiple of 100: {size}")
+
     print(f"[ORDER_CHECK] {symbol} {side} price={ticker} qty={size} notional={notional:.3f} adjusted={adjusted}")
 
     try:
+        # Add Win/Loss orderLinkId prefix to distinguish from Portfolio orders
+        order_link_id = f"WL-{symbol}-{int(time.time())}"
         order = client.LinearOrder.LinearOrder_new(side=side, symbol=symbol+"USDT", order_type="Market", qty=size,
                                            time_in_force="GoodTillCancel", reduce_only=False,
-                                           close_on_trigger=False).result()
+                                           close_on_trigger=False, order_link_id=order_link_id).result()
         print("[ORDER_OK]")
     except InvalidRequestError as e:
         print(f"[ORDER_FAIL] InvalidRequestError: {e}")
@@ -307,7 +359,6 @@ def calculate_order(symbol, side):
         place_order(symbol, side, ticker, min_order)
 
 def check_liquidations():
-    print("Launching Liquidation Websocket & Waiting for new Liquidations...")
     binance_websocket_api_manager = BinanceWebSocketApiManager(exchange="binance.com-futures")
     binance_websocket_api_manager.create_stream(['!forceOrder'], [{}])
     cycles = 5000000
@@ -371,6 +422,12 @@ def check_liquidations():
 
 
 load_jsons()
+
+print("🚀 Launching Win/Loss Liquidation System (Live Mode)")
+print("📋 Mode: Fast liquidation entries + Portfolio conflict avoidance")
+print("⚡ Speed: Real-time liquidation detection and entry")
+print()
+
 if settings['check_leverage'].lower() == 'true':
     for coin in coins:
         print("Setting Leverage for ", coin['symbol']+'USDT', " before Starting Bot")

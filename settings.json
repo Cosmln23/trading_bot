@@ -3,5 +3,37 @@
   "key": "KnVmXIzojTX5fqMv1H",
   "secret": "RFYp74r21OvddRYgB6zhbn034FuEqYgiPnRV",
   "check_leverage": "false",
-  "cooldown": 0.25
+  "cooldown": 0.25,
+  "risk_management": {
+    "daily_max_dd_pct": 5,
+    "daily_target_pct": 3,
+    "min_profit_usdt": 0.05,
+    "breakeven_at_r": 0.5
+  },
+  "portfolio": {
+    "enable": true,
+    "market": "linear_1x",
+    "buy_amount_usdt": 12,
+    "max_open_positions": 4,
+    "entry": {
+      "daily_change_min_pct": 5,
+      "liq_notional_min_usd": 100,
+      "allowlist_file": "allowlist_updated.json"
+    },
+    "risk": {
+      "max_capital_pct": 60,
+      "daily_target_pct": 3,
+      "cooldown_minutes": 15
+    },
+    "exit": {
+      "initial_stop_pct": 3,
+      "trail_from_peak_pct": 7,
+      "hard_take_profit_pct": 20
+    },
+    "pyramiding": {
+      "enable": true,
+      "add_on_move_pct": 4,
+      "max_adds": 2
+    }
+  }
 }

@@ -139,6 +139,20 @@ def load_symbols(coins):
     return symbols
 
 def check_positions(symbol):
+    # Check if this symbol is managed by Portfolio-Momentum system
+    try:
+        from pathlib import Path
+        import json
+        portfolio_state_path = Path("portfolio_state.json")
+        if portfolio_state_path.exists():
+            with open(portfolio_state_path, 'r') as f:
+                pm_state = json.load(f)
+                if symbol in pm_state:
+                    print(f"[SKIP] {symbol} is managed by Portfolio-Momentum system")
+                    return None
+    except Exception as e:
+        print(f"[PM_CHECK] Error checking PM state: {e}")
+
     positions = client.LinearPositions.LinearPositions_myPosition(symbol=symbol+"USDT").result()
     if positions[0]['ret_msg'] == 'OK':
         for position in positions[0]['result']:
@@ -295,10 +309,21 @@ def set_tp(symbol, size, side):
                 print(f"[TP] skip {symbol}: SHORT but TP price={tp_price} >= current={current_price}")
                 return {"ret_msg": "TP price validation failed - skipped"}
 
+        # Fix quantity precision for TP orders - use exact position size
+        # Get current position to get actual size
+        current_position = client.LinearPositions.LinearPositions_myPosition(symbol=symbol+"USDT").result()
+        actual_size = size  # default to passed size
+
+        if current_position[0]['ret_msg'] == 'OK':
+            for pos in current_position[0]['result']:
+                if float(pos['entry_price']) > 0:
+                    actual_size = pos['size']  # Use exact position size
+                    break
+
         print(f"[TP] setting for {symbol}: side={tp_side}, price={tp_price}")
 
         cancel = client.LinearOrder.LinearOrder_cancel(symbol=symbol + "USDT").result()
-        order = client.LinearOrder.LinearOrder_new(side=tp_side, symbol=symbol + "USDT", order_type="Limit", qty=size,
+        order = client.LinearOrder.LinearOrder_new(side=tp_side, symbol=symbol + "USDT", order_type="Limit", qty=actual_size,
                                            price=tp_price, time_in_force="GoodTillCancel",
                                            reduce_only=True, close_on_trigger=False).result()
         return order
@@ -356,13 +381,24 @@ def set_sl(symbol, size, side):
         # Cancel existing stops before placing new one
         cancel_stops(symbol, size, side)
 
+        # Fix quantity precision for SL orders - use exact position size
+        # Get current position to get actual size
+        current_position = client.LinearPositions.LinearPositions_myPosition(symbol=symbol+"USDT").result()
+        actual_size = size  # default to passed size
+
+        if current_position[0]['ret_msg'] == 'OK':
+            for pos in current_position[0]['result']:
+                if float(pos['entry_price']) > 0:
+                    actual_size = pos['size']  # Use exact position size
+                    break
+
         print(f"[SL] setting for {symbol}: side={sl_side}, triggerPrice={trigger_price}, direction={trigger_direction}")
 
         order = client.LinearConditional.LinearConditional_new(
             order_type="Limit",
             side=sl_side,
             symbol=symbol+"USDT",
-            qty=size,
+            qty=actual_size,
             price=trigger_price,
             base_price=prices[2],
             stop_px=trigger_price,
@@ -414,7 +450,10 @@ def fetch_positions():
 
 load_jsons()
 
-print("Starting Take Profit & Order Manager")
+print("🎯 Starting Take Profit & Order Manager (Live Mode)")
+print("📋 Mode: Rapid TP/SL management + Portfolio conflict avoidance")
+print("⚡ Speed: Fast response for Win/Loss positions")
+print()
 # Idempotency state: remember last side/size set time per symbol
 LAST_STATE = {}
 LAST_SET_TS = {}

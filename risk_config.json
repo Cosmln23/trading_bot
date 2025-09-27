@@ -1,0 +1,34 @@
+{
+  "risk": {
+    "equity_usdt": 19.37,
+    "risk_per_trade_pct": 1,
+    "daily_max_dd_pct": 5,
+    "hard_cap_loss_per_position_usdt": 1.0,
+    "daily_target_pct": 3
+  },
+  "execution": {
+    "take_profit_percent_base": 2.5,
+    "stop_loss_percent": 3,
+    "leverage_cap": 3,
+    "cooldown_minutes_after_loss": 30,
+    "consecutive_losses_cooldown_minutes": 60,
+    "min_profit_usdt": 0.05,
+    "breakeven_move_at_ratio": 0.5
+  },
+  "filters": {
+    "whitelist_symbols": ["ETHUSDT"],
+    "enable_liquidation_filter": true,
+    "blocklist_symbols": []
+  },
+  "adaptation": {
+    "bump_tp_on_liq_spike": true,
+    "liq_spike_threshold_percentile": 90,
+    "tp_bump_percent": 0.5
+  },
+  "daily_controls": {
+    "stop_trading_at_target": true,
+    "reset_daily_stats_hour": 0,
+    "min_profit_per_trade": true,
+    "move_sl_to_breakeven": true
+  }
+}
