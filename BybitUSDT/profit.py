@@ -139,17 +139,18 @@ def load_symbols(coins):
     return symbols
 
 def check_positions(symbol):
-    # Check if this symbol is managed by Portfolio-Momentum system
+    # Read Portfolio-Momentum state (if any), but only skip if real position exists
+    skip_if_managed = False
     try:
         from pathlib import Path
-        import json
+        import json as _json
         portfolio_state_path = Path("portfolio_state.json")
         if portfolio_state_path.exists():
             with open(portfolio_state_path, 'r') as f:
-                pm_state = json.load(f)
-                if symbol in pm_state:
-                    print(f"[SKIP] {symbol} is managed by Portfolio-Momentum system")
-                    return None
+                pm_state = _json.load(f)
+            pm_positions = pm_state.get("positions", pm_state if isinstance(pm_state, dict) else {})
+            if isinstance(pm_positions, dict) and symbol in pm_positions:
+                skip_if_managed = True
     except Exception as e:
         print(f"[PM_CHECK] Error checking PM state: {e}")
 
@@ -157,6 +158,9 @@ def check_positions(symbol):
     if positions[0]['ret_msg'] == 'OK':
         for position in positions[0]['result']:
             if position['entry_price'] > 0:
+                if skip_if_managed:
+                    print(f"[SKIP] {symbol} is managed by Portfolio-Momentum system")
+                    return None
                 print("Position found for ", symbol, " entry price of ", position['entry_price'])
                 return position
             else:

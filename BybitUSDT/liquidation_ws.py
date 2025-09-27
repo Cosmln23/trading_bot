@@ -204,14 +204,15 @@ def place_order(symbol, side, ticker, size):
     # Check if symbol is in Portfolio-Momentum system to avoid conflicts
     try:
         from pathlib import Path
-        import json
+        import json as _json
         portfolio_state_path = Path("portfolio_state.json")
         if portfolio_state_path.exists():
             with open(portfolio_state_path, 'r') as f:
-                pm_state = json.load(f)
-                if symbol in pm_state:
-                    print(f"[SKIP WL] {symbol} is in Portfolio-Momentum system. Skipping Win/Loss entry.")
-                    return
+                pm_state = _json.load(f)
+            pm_positions = pm_state.get("positions", pm_state if isinstance(pm_state, dict) else {})
+            if isinstance(pm_positions, dict) and symbol in pm_positions:
+                print(f"[SKIP WL] {symbol} is in Portfolio-Momentum system. Skipping Win/Loss entry.")
+                return
     except Exception as e:
         print(f"[CONFLICT_CHECK] Error checking PM state: {e}")
 
@@ -258,10 +259,10 @@ def place_order(symbol, side, ticker, size):
     size, notional, adjusted = ensure_min_notional(size, ticker)
 
     # Fix quantity precision based on qtyStep requirements
-    qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND']  # qtyStep=0.1
-    qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA']  # qtyStep=1
-    qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS']  # qtyStep=10
-    qty_step_100_symbols = ['1000BONK']  # qtyStep=100
+    qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G']  # qtyStep=0.1
+    qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL']  # qtyStep=1
+    qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO']  # qtyStep=10
+    qty_step_100_symbols = ['1000BONK', 'AKE', '1000PEPE']  # qtyStep=100
 
     if symbol in qty_step_01_symbols:
         # Round to 1 decimal place (qtyStep=0.1)
@@ -287,11 +288,16 @@ def place_order(symbol, side, ticker, size):
     print(f"[ORDER_CHECK] {symbol} {side} price={ticker} qty={size} notional={notional:.3f} adjusted={adjusted}")
 
     try:
-        # Add Win/Loss orderLinkId prefix to distinguish from Portfolio orders
-        order_link_id = f"WL-{symbol}-{int(time.time())}"
-        order = client.LinearOrder.LinearOrder_new(side=side, symbol=symbol+"USDT", order_type="Market", qty=size,
-                                           time_in_force="GoodTillCancel", reduce_only=False,
-                                           close_on_trigger=False, order_link_id=order_link_id).result()
+        # Place Win/Loss market order using wrapper method (no order_link_id parameter supported here)
+        order = client.LinearOrder.LinearOrder_new(
+            side=side,
+            symbol=symbol+"USDT",
+            order_type="Market",
+            qty=size,
+            time_in_force="GoodTillCancel",
+            reduce_only=False,
+            close_on_trigger=False
+        ).result()
         print("[ORDER_OK]")
     except InvalidRequestError as e:
         print(f"[ORDER_FAIL] InvalidRequestError: {e}")

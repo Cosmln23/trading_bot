@@ -1,26 +1,42 @@
 {
-  "SNX": {
-    "entry": 1.1244,
-    "peak": 1.1672,
-    "size": 10.672358591248665,
-    "adds_done": 0,
-    "breakeven_moved": true,
-    "timestamp": 1758965468.241981
+  "positions": {
+    "XPL": {
+      "entry": 1.4923,
+      "peak": 1.4982,
+      "size": 8.041278563291563,
+      "adds_done": 0,
+      "breakeven_moved": false,
+      "timestamp": 1758971906.9173915
+    },
+    "H": {
+      "entry": 0.0765,
+      "peak": 0.081493,
+      "size": 156.86274509803923,
+      "adds_done": 0,
+      "breakeven_moved": true,
+      "timestamp": 1758971906.9173915
+    },
+    "SNX": {
+      "entry": 1.2047,
+      "peak": 1.2205,
+      "size": 9.960986137627625,
+      "adds_done": 0,
+      "breakeven_moved": false,
+      "timestamp": 1758971906.9173915
+    },
+    "MYX": {
+      "entry": 11.6952,
+      "peak": 11.8932,
+      "size": 1.0260619741432382,
+      "adds_done": 0,
+      "breakeven_moved": true,
+      "timestamp": 1758971906.9173915
+    }
   },
-  "MYX": {
-    "entry": 11.1553,
-    "peak": 11.6433,
-    "size": 1.0757218541859026,
-    "adds_done": 0,
-    "breakeven_moved": true,
-    "timestamp": 1758965468.241981
-  },
-  "XPL": {
-    "entry": 1.4435,
-    "peak": 1.5028,
-    "size": 8.313127814340145,
-    "adds_done": 0,
-    "breakeven_moved": true,
-    "timestamp": 1758965468.241981
+  "cooldowns": {
+    "XPL": 1758971906.9173915,
+    "H": 1758971906.9173915,
+    "SNX": 1758971906.9173915,
+    "MYX": 1758971906.9173915
   }
 }
