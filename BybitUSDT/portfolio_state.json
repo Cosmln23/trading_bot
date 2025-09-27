@@ -2,7 +2,7 @@
   "positions": {
     "XPL": {
       "entry": 1.4923,
-      "peak": 1.4982,
+      "peak": 1.5072,
       "size": 8.041278563291563,
       "adds_done": 0,
       "breakeven_moved": false,
@@ -18,10 +18,10 @@
     },
     "SNX": {
       "entry": 1.2047,
-      "peak": 1.2205,
+      "peak": 1.2293,
       "size": 9.960986137627625,
       "adds_done": 0,
-      "breakeven_moved": false,
+      "breakeven_moved": true,
       "timestamp": 1758971906.9173915
     },
     "MYX": {
