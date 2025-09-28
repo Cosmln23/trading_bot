@@ -531,6 +531,21 @@ def main():
                 if removed:
                     print(f"🧹 [RECONCILE] Cleaned {removed} stale position(s) from state")
 
+                # Hot-reload allowlist every scan without restarting the process
+                try:
+                    new_allowlist = load_allowlist()
+                    if new_allowlist != allowlist:
+                        added = sorted(list(new_allowlist - allowlist))
+                        removed_syms = sorted(list(allowlist - new_allowlist))
+                        allowlist = new_allowlist
+                        print(f"📋 [ALLOWLIST] Reloaded: {len(allowlist)} symbols | +{len(added)} -{len(removed_syms)}")
+                        if added:
+                            print(f"   ➕ Added: {', '.join(added[:10])}{'…' if len(added) > 10 else ''}")
+                        if removed_syms:
+                            print(f"   ➖ Removed: {', '.join(removed_syms[:10])}{'…' if len(removed_syms) > 10 else ''}")
+                except Exception as e:
+                    print(f"[ALLOWLIST] Reload error: {e}")
+
                 effective_budget = get_effective_budget(client, cfg)
                 used_budget = portfolio_invested
                 remaining_budget = max(0.0, effective_budget - portfolio_invested)

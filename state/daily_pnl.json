@@ -4,5 +4,8 @@
     "stopped": false,
     "loss_streak": 0,
     "trades": 0
-  }
+  },
+  "date": "2025-09-27",
+  "baseline_equity": 358.61898263,
+  "num_trades": 0
 }

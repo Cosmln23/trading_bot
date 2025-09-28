@@ -64,7 +64,7 @@ class TelegramBotControl:
             )
 
             for line in result.stdout.split('\n'):
-                if 'python' in line:
+                if 'python' in line or 'uvicorn' in line:
                     if 'risk_guard' in line:
                         pid = line.split()[1]
                         processes["risk_guard"].append(pid)
@@ -74,10 +74,10 @@ class TelegramBotControl:
                     elif 'liquidation_ws.py' in line or 'liquidation.py' in line:
                         pid = line.split()[1]
                         processes["liquidation"].append(pid)
-                    elif 'portfolio_manager.py' in line:
+                    elif 'portfolio_manager.py' in line or 'BybitUSDT.portfolio_manager' in line:
                         pid = line.split()[1]
                         processes["portfolio"].append(pid)
-                    elif 'panic_server' in line:
+                    elif 'panic_server' in line or 'panic.server' in line:
                         pid = line.split()[1]
                         processes["panic_server"].append(pid)
                     elif 'telegram_bot_control.py' in line:

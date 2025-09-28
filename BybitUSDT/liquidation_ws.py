@@ -96,6 +96,46 @@ client = bybitwrapper.bybit(test=False, api_key=settings['key'], api_secret=sett
 # Cache for last known prices to improve resilience on temporary data outages
 PRICE_CACHE = {}
 
+def compute_im_percent():
+    """Approximate IM% from unified wallet or positions."""
+    try:
+        sess = getattr(client, '_session', None)
+        if sess is None:
+            return 0.0
+        # Equity
+        eq = 0.0
+        try:
+            wb = sess.get_wallet_balance(accountType="UNIFIED")
+            lst = (wb.get('result', {}) or {}).get('list', [])
+            if lst:
+                eq = float(lst[0].get('totalEquity') or 0.0)
+        except Exception:
+            pass
+        if eq <= 0:
+            return 0.0
+        # Try direct IM field
+        try:
+            acct = lst[0]
+            tim = float(acct.get('totalInitialMargin') or acct.get('accountIM') or acct.get('totalIM') or 0.0)
+            if tim > 0:
+                return (tim / eq) * 100.0
+        except Exception:
+            pass
+        # Fallback sum over positions
+        im_sum = 0.0
+        rp = sess.get_positions(category="linear")
+        for p in (rp.get('result', {}) or {}).get('list', []) or []:
+            size = float(p.get('size') or 0)
+            if size <= 0:
+                continue
+            price = float(p.get('markPrice') or p.get('avgPrice') or 0)
+            lev = float(p.get('leverage') or 1)
+            if price > 0 and lev > 0:
+                im_sum += (size * price) / max(1.0, lev)
+        return (im_sum / eq) * 100.0 if eq > 0 else 0.0
+    except Exception:
+        return 0.0
+
 
 def load_jsons():
     #print("Checking Settings")
@@ -298,6 +338,18 @@ def place_order(symbol, side, ticker, size):
     if not check_panic_trading_enabled():
         print(f'[PANIC] Trading disabled by panic button - skipping {symbol} {side} order')
         return
+
+    # IM% guard: avoid new entries when IM% too high
+    try:
+        im_pct = compute_im_percent()
+        if im_pct > 100:
+            print(f"[IM% BLOCK] {symbol} entry blocked: IM%={im_pct:.1f} > 100")
+            return
+        if im_pct > 80:
+            print(f"[IM% WARN] Elevated IM%={im_pct:.1f}; skipping new entry for {symbol}")
+            return
+    except Exception:
+        pass
 
     print('*****************************************************')
     print(symbol, side, " Entry Found!! Placing new order!!")

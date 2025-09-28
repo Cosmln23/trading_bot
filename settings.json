@@ -6,7 +6,8 @@
   "cooldown": 0.25,
   "risk_management": {
     "daily_max_dd_pct": 5,
-    "daily_target_pct": 3,
+    "daily_target_pct": 10,
+    "equity_usdt": 350,
     "min_profit_usdt": 0.05,
     "breakeven_at_r": 0.5
   },

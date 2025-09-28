@@ -1,13 +1,19 @@
 import ccxt
 import requests
 import os
-from datetime import datetime
+from datetime import datetime, timezone
 from time import sleep
 import time
 import json
 import logging
 from prettyprinter import pprint
 import bybitwrapper
+from pathlib import Path
+import csv
+try:
+    import yaml
+except Exception:
+    yaml = None
 
 def execute_risk_commands():
     """Execute risk commands from command center if available."""
@@ -121,6 +127,273 @@ binance = exchange_class({
 binance.load_markets()
 
 client = bybitwrapper.bybit(test=False, api_key=settings['key'], api_secret=settings['secret'])
+
+"""
+Telegram + Risk utilities (daily PnL, IM%)
+"""
+# Telegram
+TELEGRAM_BOT_TOKEN = None
+TELEGRAM_CHAT_ID = None
+
+def _load_telegram_config():
+    global TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
+    try:
+        cfg_path = Path('../config/panic.yaml')
+        if cfg_path.exists() and yaml is not None:
+            with open(cfg_path, 'r') as f:
+                cfg = yaml.safe_load(f)
+            TELEGRAM_BOT_TOKEN = cfg['alert']['telegram']['bot_token']
+            TELEGRAM_CHAT_ID = cfg['alert']['telegram']['chat_id']
+    except Exception as e:
+        print(f"[TELEGRAM] Config load error: {e}")
+
+def send_telegram(message: str):
+    try:
+        if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+            _load_telegram_config()
+        if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
+            return
+        url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
+        payload = {
+            "chat_id": TELEGRAM_CHAT_ID,
+            "text": message,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+        }
+        requests.post(url, json=payload, timeout=3)
+    except Exception as e:
+        print(f"[TELEGRAM] send error: {e}")
+
+# Daily state + IM helpers
+DAILY_STATE_PATH = Path('../state/daily_pnl.json')
+PNL_CSV_PATH = Path('pnl_log.csv')
+
+def _utc_date_str(ts: float | None = None) -> str:
+    dt = datetime.now(timezone.utc) if ts is None else datetime.fromtimestamp(ts, tz=timezone.utc)
+    return dt.strftime('%Y-%m-%d')
+
+def get_equity(client) -> float:
+    try:
+        sess = getattr(client, '_session', None)
+        if sess is not None:
+            r = sess.get_wallet_balance(accountType="UNIFIED")
+            lst = (r.get('result', {}) or {}).get('list', [])
+            if lst:
+                eq = float(lst[0].get('totalEquity') or 0.0)
+                if eq > 0:
+                    return eq
+        # Fallback legacy
+        balance_body, _ = client.Wallet.Wallet_getBalance(coin="USDT").result()
+        return float(balance_body.get("result", {}).get("USDT", {}).get("wallet_balance", 0.0))
+    except Exception as e:
+        print(f"[EQUITY] error: {e}")
+        return 0.0
+
+def compute_im_percent(client) -> float:
+    try:
+        sess = getattr(client, '_session', None)
+        equity = get_equity(client)
+        if equity <= 0:
+            return 0.0
+        if sess is not None:
+            try:
+                r = sess.get_wallet_balance(accountType="UNIFIED")
+                lst = (r.get('result', {}) or {}).get('list', [])
+                if lst:
+                    acct = lst[0]
+                    total_im = float(acct.get('totalInitialMargin') or acct.get('accountIM') or acct.get('totalIM') or 0.0)
+                    if total_im > 0:
+                        return (total_im / equity) * 100.0
+            except Exception:
+                pass
+            # Approx from positions
+            im_sum = 0.0
+            rp = sess.get_positions(category="linear")
+            for p in (rp.get('result', {}) or {}).get('list', []) or []:
+                size = float(p.get('size') or 0)
+                if size <= 0:
+                    continue
+                price = float(p.get('markPrice') or p.get('avgPrice') or 0)
+                lev = float(p.get('leverage') or 1)
+                if price > 0 and lev > 0:
+                    im_sum += (size * price) / max(1.0, lev)
+            if im_sum > 0:
+                return (im_sum / equity) * 100.0
+        return 0.0
+    except Exception as e:
+        print(f"[IM%] error: {e}")
+        return 0.0
+
+def _load_daily_state() -> dict:
+    if DAILY_STATE_PATH.exists():
+        try:
+            with open(DAILY_STATE_PATH, 'r') as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+def _save_daily_state(state: dict):
+    try:
+        DAILY_STATE_PATH.parent.mkdir(exist_ok=True)
+        with open(DAILY_STATE_PATH, 'w') as f:
+            json.dump(state, f, indent=2)
+    except Exception as e:
+        print(f"[DAILY_STATE] save error: {e}")
+
+def ensure_daily_baseline(equity_now: float) -> tuple[float, str]:
+    state = _load_daily_state()
+    today = _utc_date_str()
+    day = state.get('date')
+    baseline = state.get('baseline_equity')
+    if day != today or not baseline:
+        state.update({'date': today, 'baseline_equity': equity_now, 'num_trades': 0})
+        _save_daily_state(state)
+        print(f"[DAILY] baseline set {today}: equity={equity_now:.2f}")
+        send_telegram(f"🛠️ Config updated to equity={settings['risk_management'].get('equity_usdt', 'N/A')}, aggressive mode ON")
+        return equity_now, today
+    return float(baseline), today
+
+def update_closed_trades_counter():
+    try:
+        sess = getattr(client, '_session', None)
+        if sess is None:
+            return
+        r = sess.get_positions(category="linear")
+        current = set()
+        for p in (r.get('result', {}) or {}).get('list', []) or []:
+            if float(p.get('size') or 0) > 0:
+                current.add(p.get('symbol', '').replace('USDT', ''))
+        prev = set(update_closed_trades_counter.prev_open or [])
+        closed = prev - current
+        if closed:
+            state = _load_daily_state()
+            state['num_trades'] = int(state.get('num_trades', 0)) + len(closed)
+            _save_daily_state(state)
+        update_closed_trades_counter.prev_open = list(current)
+    except Exception:
+        pass
+update_closed_trades_counter.prev_open = []
+
+def log_pnl_csv(daily_profit_pct: float, daily_profit_usd: float):
+    try:
+        file_exists = PNL_CSV_PATH.exists()
+        with open(PNL_CSV_PATH, 'a', newline='') as f:
+            w = csv.writer(f)
+            if not file_exists:
+                w.writerow(['date', 'daily_profit_pct', 'daily_profit_usd', 'num_trades'])
+            state = _load_daily_state()
+            w.writerow([_utc_date_str(), f"{daily_profit_pct:.2f}", f"{daily_profit_usd:.2f}", int(state.get('num_trades', 0))])
+    except Exception as e:
+        print(f"[PNL-CSV] error: {e}")
+
+def _round_qty_for_symbol(symbol: str, qty: float) -> float:
+    qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G']
+    qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL']
+    qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO']
+    qty_step_100_symbols = ['1000BONK', 'AKE', '1000PEPE']
+    if symbol in qty_step_01_symbols:
+        return round(qty, 1)
+    if symbol in qty_step_1_symbols:
+        return int(qty)
+    if symbol in qty_step_10_symbols:
+        return int(qty // 10) * 10
+    if symbol in qty_step_100_symbols:
+        return int(qty // 100) * 100
+    return round(qty, 3)
+
+def close_all_positions_reduce_only():
+    try:
+        sess = getattr(client, '_session', None)
+        if sess is None:
+            return 0, 0
+        r = sess.get_positions(category="linear")
+        closed, errors = 0, 0
+        for p in (r.get('result', {}) or {}).get('list', []) or []:
+            size = float(p.get('size') or 0)
+            if size <= 0:
+                continue
+            full_symbol = p.get('symbol', '')
+            symbol = full_symbol.replace('USDT', '')
+            side = str(p.get('side', '')).lower()
+            if side == 'buy':
+                close_side = 'Sell'; idx = 1
+            else:
+                close_side = 'Buy'; idx = 2
+            qty = _round_qty_for_symbol(symbol, size)
+            try:
+                resp = sess.place_order(
+                    category="linear", symbol=full_symbol, side=close_side,
+                    orderType="Market", qty=str(qty), timeInForce="IOC",
+                    reduceOnly=True, positionIdx=idx)
+                if resp.get('retCode') == 0:
+                    closed += 1
+                else:
+                    resp2 = sess.place_order(
+                        category="linear", symbol=full_symbol, side=close_side,
+                        orderType="Market", qty=str(qty), timeInForce="IOC",
+                        reduceOnly=True)
+                    if resp2.get('retCode') == 0:
+                        closed += 1
+                    else:
+                        errors += 1
+                        print(f"[CLOSE-ALL] {symbol} fail: {resp2.get('retMsg')}")
+            except Exception as e:
+                errors += 1
+                print(f"[CLOSE-ALL] {symbol} exception: {e}")
+        try:
+            Path('../trading_disabled.flag').write_text('1')
+        except Exception:
+            pass
+        return closed, errors
+    except Exception as e:
+        print(f"[CLOSE-ALL] fatal: {e}")
+        return 0, 1
+
+def reduce_positions_by_fraction(frac: float):
+    try:
+        sess = getattr(client, '_session', None)
+        if sess is None:
+            return 0, 0
+        r = sess.get_positions(category="linear")
+        reduced, errors = 0, 0
+        for p in (r.get('result', {}) or {}).get('list', []) or []:
+            size = float(p.get('size') or 0)
+            if size <= 0:
+                continue
+            full_symbol = p.get('symbol', '')
+            symbol = full_symbol.replace('USDT', '')
+            side = str(p.get('side', '')).lower()
+            qty = max(0.0, size * float(frac))
+            if qty <= 0:
+                continue
+            qty = _round_qty_for_symbol(symbol, qty)
+            close_side = 'Sell' if side == 'buy' else 'Buy'
+            idx = 1 if side == 'buy' else 2
+            try:
+                resp = sess.place_order(
+                    category="linear", symbol=full_symbol, side=close_side,
+                    orderType="Market", qty=str(qty), timeInForce="IOC",
+                    reduceOnly=True, positionIdx=idx)
+                if resp.get('retCode') == 0:
+                    reduced += 1
+                else:
+                    resp2 = sess.place_order(
+                        category="linear", symbol=full_symbol, side=close_side,
+                        orderType="Market", qty=str(qty), timeInForce="IOC",
+                        reduceOnly=True)
+                    if resp2.get('retCode') == 0:
+                        reduced += 1
+                    else:
+                        errors += 1
+                        print(f"[REDUCE] {symbol} fail: {resp2.get('retMsg')}")
+            except Exception as e:
+                errors += 1
+                print(f"[REDUCE] {symbol} exception: {e}")
+        return reduced, errors
+    except Exception as e:
+        print(f"[REDUCE] fatal: {e}")
+        return 0, 1
 
 
 def load_jsons():
@@ -464,6 +737,55 @@ LAST_SET_TS = {}
 IDEMPOTENCY_COOLDOWN_SEC = 45
 while True:
     print("Checking for Positions.........")
+    # =========================
+    # Daily PnL + IM% controls
+    # =========================
+    try:
+        equity_now = get_equity(client)
+        baseline, _ = ensure_daily_baseline(equity_now)
+        if baseline > 0:
+            daily_usd = equity_now - baseline
+            daily_pct = (daily_usd / baseline) * 100.0
+        else:
+            daily_usd = 0.0
+            daily_pct = 0.0
+
+        # IM% monitoring (alerts and auto-reduce)
+        im_pct = compute_im_percent(client)
+        now_ts = time.time()
+        last_im_warn = globals().get('_LAST_IM_WARN', 0)
+        last_im_reduce = globals().get('_LAST_IM_REDUCE', 0)
+        if im_pct > 80 and (now_ts - last_im_warn) > 300:
+            send_telegram(f"⚠️ Warning: IM% > 80% (IM={im_pct:.1f}%). High leverage risk.")
+            globals()['_LAST_IM_WARN'] = now_ts
+        if im_pct > 100 and (now_ts - last_im_reduce) > 300:
+            r_ok, r_err = reduce_positions_by_fraction(0.20)
+            send_telegram(f"⛔ Danger: IM% exceeded 100% (IM={im_pct:.1f}%). Exposure reduced 20% | OK {r_ok}, Err {r_err}.")
+            globals()['_LAST_IM_REDUCE'] = now_ts
+
+        # Daily stop/target
+        target_pct = float(settings.get('risk_management', {}).get('daily_target_pct', 10))
+        max_dd_pct = float(settings.get('risk_management', {}).get('daily_max_dd_pct', 5))
+
+        if daily_pct >= target_pct:
+            c_ok, c_err = close_all_positions_reduce_only()
+            send_telegram(f"🎯 Daily profit target hit (+{daily_pct:.1f}%). Closed all ({c_ok} OK/{c_err} Err) and stopped.")
+            log_pnl_csv(daily_pct, daily_usd)
+            # Disable trading, then idle
+            sleep(settings['cooldown'])
+            continue
+        if daily_pct <= -max_dd_pct:
+            c_ok, c_err = close_all_positions_reduce_only()
+            send_telegram(f"🛑 Daily stop-loss hit ({daily_pct:.1f}%). Closed all ({c_ok} OK/{c_err} Err) and stopped.")
+            log_pnl_csv(daily_pct, daily_usd)
+            sleep(settings['cooldown'])
+            continue
+
+        # Update closed trades counter (for CSV)
+        update_closed_trades_counter()
+    except Exception as e:
+        print(f"[DAILY/IM] error: {e}")
+
     # Execute risk commands from command center BEFORE processing positions
     execute_risk_commands()
 
