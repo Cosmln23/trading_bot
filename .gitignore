@@ -1,5 +1,18 @@
-# Bybit API Keys - CRITICAL SECURITY
+# CRITICAL SECURITY - API KEYS AND SECRETS
 settings.json
+config/panic.yaml
+*.yaml
+*.yml
+
+# Sensitive Configuration Files
+**/config/
+**/secrets/
+*key*
+*secret*
+*token*
+*api*
+.env
+.env.*
 
 # Python
 __pycache__/

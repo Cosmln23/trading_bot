@@ -1,0 +1,1557 @@
+{"ts": "2025-09-28T13:35:19.317414+00:00", "event": "position_open_or_change", "symbol": "SOLV", "side": "Buy", "qty": 2356.0, "entry_price": 0.04606198}
+{"ts": "2025-09-28T13:35:22.649853+00:00", "event": "sl_set", "symbol": "SOLV", "side": "Sell", "trigger_price": 0.045, "qty": 2356.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:35:35.055008+00:00", "event": "position_open_or_change", "symbol": "HIFI", "side": "Sell", "qty": 487.0, "entry_price": 0.22249222}
+{"ts": "2025-09-28T13:35:37.727307+00:00", "event": "tp_set", "symbol": "HIFI", "side": "Buy", "price": 0.21693, "qty": 487.0}
+{"ts": "2025-09-28T13:35:39.000178+00:00", "event": "sl_set", "symbol": "HIFI", "side": "Buy", "trigger_price": 0.23, "qty": 487.0, "trigger_direction": 1}
+{"ts": "2025-09-28T13:36:16.611301+00:00", "event": "sl_exists", "symbol": "SOLV"}
+{"ts": "2025-09-28T13:36:27.580497+00:00", "event": "position_open_or_change", "symbol": "BAKE", "side": "Sell", "qty": 2229.3, "entry_price": 0.04848}
+{"ts": "2025-09-28T13:36:30.117088+00:00", "event": "tp_set", "symbol": "BAKE", "side": "Buy", "price": 0.04727, "qty": 2229.3}
+{"ts": "2025-09-28T13:36:31.382417+00:00", "event": "sl_set", "symbol": "BAKE", "side": "Buy", "trigger_price": 0.05, "qty": 2229.3, "trigger_direction": 1}
+{"ts": "2025-09-28T13:36:34.846116+00:00", "event": "tp_set", "symbol": "HIFI", "side": "Buy", "price": 0.21693, "qty": 487.0}
+{"ts": "2025-09-28T13:36:36.114352+00:00", "event": "sl_set", "symbol": "HIFI", "side": "Buy", "trigger_price": 0.23, "qty": 487.0, "trigger_direction": 1}
+{"ts": "2025-09-28T13:43:59.175869+00:00", "event": "position_open_or_change", "symbol": "BLESS", "side": "Buy", "qty": 3400.0, "entry_price": 0.03196971}
+{"ts": "2025-09-28T13:44:03.216826+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:44:04.521517+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:44:10.581005+00:00", "event": "position_open_or_change", "symbol": "H", "side": "Sell", "qty": 1260.0, "entry_price": 0.07768945}
+{"ts": "2025-09-28T13:44:13.656393+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075747, "qty": 1260.0}
+{"ts": "2025-09-28T13:44:14.956800+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1260.0, "trigger_direction": 1}
+{"ts": "2025-09-28T13:44:32.112252+00:00", "event": "position_open_or_change", "symbol": "SNX", "side": "Buy", "qty": 103.9, "entry_price": 1.0442}
+{"ts": "2025-09-28T13:44:36.025927+00:00", "event": "sl_set", "symbol": "SNX", "side": "Sell", "trigger_price": 1.012, "qty": 103.9, "trigger_direction": 2}
+{"ts": "2025-09-28T13:45:06.552192+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:45:07.855316+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:45:33.891521+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:46:04.131101+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:46:05.744895+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:46:07.519919+00:00", "event": "position_open_or_change", "symbol": "ASTER", "side": "Buy", "qty": 61.0, "entry_price": 1.7703}
+{"ts": "2025-09-28T13:46:11.518644+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:46:12.824325+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.717, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:46:19.293304+00:00", "event": "position_open_or_change", "symbol": "STBL", "side": "Buy", "qty": 272.0, "entry_price": 0.39758864}
+{"ts": "2025-09-28T13:46:23.081043+00:00", "event": "sl_set", "symbol": "STBL", "side": "Sell", "trigger_price": 0.386, "qty": 272.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:46:40.958870+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:47:10.091846+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:47:11.401146+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:47:16.903039+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:47:18.204341+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.716, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:47:27.260670+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:47:45.097003+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:48:14.059410+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:48:15.393404+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:48:21.230504+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:48:22.539047+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.717, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:48:31.143920+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:48:48.495616+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:49:18.827762+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:49:20.129438+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:49:25.508483+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:49:26.812163+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.717, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:49:36.031360+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:49:54.206602+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:50:23.103208+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:50:24.401102+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:50:29.308891+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:50:30.608023+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.727, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:50:39.347165+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:50:57.992883+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:51:27.213846+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:51:28.512968+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:51:34.034502+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:51:35.337393+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.73, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:51:44.424691+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:52:01.597351+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:52:31.377525+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:52:32.678783+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:52:37.718053+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:52:39.016254+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.726, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:52:48.740083+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:53:00.918463+00:00", "event": "position_open_or_change", "symbol": "BARD", "side": "Buy", "qty": 110.9, "entry_price": 0.98324766}
+{"ts": "2025-09-28T13:53:04.275551+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T13:53:06.539157+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T13:53:12.364129+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:53:40.187454+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:53:41.539021+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:53:47.069441+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:53:48.374811+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.73, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:53:57.115684+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:54:14.548357+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T13:54:15.849146+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T13:54:21.811223+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:54:50.392796+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:54:51.697392+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:54:57.437433+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:54:58.742468+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.727, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:55:07.539048+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:55:24.638678+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T13:55:25.938011+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T13:55:31.275404+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:55:59.355171+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:56:00.656468+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:56:05.547411+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:56:06.853526+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.738, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:56:16.722469+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:56:32.726468+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T13:56:34.038028+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.961, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T13:56:39.229193+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:57:08.364311+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:57:09.972419+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:57:15.793031+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:57:17.095591+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.742, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:57:26.148031+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:57:41.531139+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T13:57:42.832568+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.958, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T13:57:47.881616+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:58:17.085668+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:58:18.391178+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:58:24.368909+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:58:25.673073+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.747, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:58:34.407548+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:58:49.752396+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T13:58:51.049356+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T13:58:55.935025+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T13:59:25.358491+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T13:59:26.662603+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:59:32.174386+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T13:59:33.481824+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.751, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T13:59:42.091375+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T13:59:57.338599+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T13:59:58.652882+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:00:07.062780+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:00:35.930366+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:00:37.235330+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:00:42.424318+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:00:43.722023+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.755, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:00:52.155610+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:01:08.319809+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:01:09.624999+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:01:14.838282+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:01:43.859511+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:01:45.166963+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:01:50.242160+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:01:51.546900+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.745, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:02:00.289474+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:02:17.528495+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:02:18.837429+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:02:24.475530+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:02:52.767234+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:02:54.069226+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:02:59.924774+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:03:01.238635+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.747, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:03:10.632053+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:03:27.512711+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:03:28.816799+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:03:34.303577+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:04:02.410563+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:04:03.710831+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:04:08.752765+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:04:10.369609+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.738, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:04:20.537944+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:04:37.069425+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:04:38.370182+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.95, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:04:43.885683+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:05:13.340275+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:05:14.645089+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:05:19.714387+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:05:21.015052+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.733, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:05:30.714960+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:05:45.807028+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:05:47.110614+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:05:52.139314+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:06:22.050578+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:06:23.674799+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:06:29.341856+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:06:30.642983+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.733, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:06:39.231250+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:06:54.781868+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:06:56.088010+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:07:01.600265+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:07:32.117883+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:07:33.419309+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:07:38.454044+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:07:39.752897+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.736, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:07:48.848306+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:08:04.251842+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:08:05.553955+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:08:10.795441+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:08:41.124935+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:08:42.426541+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:08:47.960639+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:08:49.269335+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.738, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:08:58.301885+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:09:13.648840+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:09:15.582134+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:09:22.354242+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:09:50.250976+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:09:51.554546+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:09:57.376548+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:09:58.676418+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.727, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:10:07.268993+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:10:24.255845+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:10:25.875409+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:10:31.095823+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:10:58.526388+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:10:59.829592+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:11:04.727243+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:11:06.031652+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.729, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:11:15.112635+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:11:32.545382+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:11:33.845294+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:11:39.484046+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:12:09.984179+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:12:11.286905+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:12:16.823589+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:12:18.766221+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.732, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:12:29.080139+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:12:45.099668+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:12:46.400300+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:12:52.208565+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:13:21.817283+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:13:23.445868+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:13:28.478125+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:13:29.781866+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.737, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:13:39.243372+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:13:54.689374+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:13:55.991371+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:14:01.641131+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:14:31.090798+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:14:32.396954+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:14:38.384661+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:14:39.695534+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.739, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:14:48.618949+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:15:04.150089+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:15:05.447737+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:15:10.499549+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:15:39.161344+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:15:40.462147+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:15:45.836328+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:15:47.139884+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.741, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:15:56.516772+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:16:11.735179+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:16:13.037428+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:16:18.108491+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:16:47.965579+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:16:49.272209+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:16:54.023359+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:16:55.325889+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.738, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:17:04.224087+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:17:19.807050+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:17:21.107048+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:17:28.037356+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:17:56.714665+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:17:58.024127+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:18:03.557834+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:18:04.856310+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.737, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:18:13.472347+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:18:30.752321+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:18:32.063045+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:18:37.582677+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:19:06.026629+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:19:07.336061+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:19:13.003012+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:19:14.303979+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.73, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:19:23.100435+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:19:39.757579+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:19:41.060001+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:19:46.913020+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:20:17.311243+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:20:18.611685+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:20:24.286253+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:20:25.903513+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.74, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:20:35.753107+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:20:51.032463+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:20:52.334853+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:20:57.980306+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:21:25.520024+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:21:27.143900+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:21:33.605803+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:21:34.920043+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.742, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:21:43.549978+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:21:59.235867+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:22:00.541498+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:22:06.204733+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:22:34.930939+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:22:36.232966+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:22:41.610062+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:22:42.916233+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.74, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:22:51.706930+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:23:07.256753+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:23:08.557725+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:23:14.200127+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:23:43.582461+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:23:44.885913+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:23:50.865679+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:23:52.166475+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.741, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:24:01.069811+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:24:17.018185+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:24:18.322734+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:24:24.094913+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:24:53.801815+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:24:55.110202+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:25:00.295191+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:25:01.650116+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.744, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:25:10.897173+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:25:25.920484+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:25:27.847234+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:25:33.329582+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:26:01.977973+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:26:03.272834+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:26:09.256936+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:26:10.555252+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.743, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:26:19.266388+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:26:37.288409+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:26:38.589963+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:26:44.073888+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:27:12.532297+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:27:13.837185+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:27:19.356043+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:27:20.663922+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.752, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:27:30.793750+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:27:47.558264+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:27:48.865173+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.958, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:27:54.521762+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:28:22.129179+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:28:23.434673+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:28:28.162640+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:28:29.461859+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.747, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:28:39.148297+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:28:55.158384+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:28:56.458347+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:29:01.958408+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:29:30.407257+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:29:32.654473+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:29:38.152131+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:29:39.454164+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.748, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:29:49.133770+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:30:04.017472+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:30:05.327894+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:30:10.647700+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:30:39.654775+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:30:40.955722+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:30:46.155463+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:30:47.454396+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.748, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:30:56.644994+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:31:12.380927+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:31:13.674952+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:31:18.854442+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:31:47.790468+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:31:49.101287+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:31:54.620827+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:31:55.925873+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.747, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:32:05.270651+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:32:20.805168+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:32:22.107057+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:32:27.309393+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:32:55.635977+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:32:56.944247+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:33:02.464223+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:33:03.766384+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.746, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:33:12.502959+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:33:27.566516+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:33:28.866256+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:33:34.384073+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:34:03.353506+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:34:04.680122+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:34:10.106053+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:34:11.408343+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.74, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:34:20.793625+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:34:37.551441+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:34:38.846927+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:34:44.690878+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:35:12.599104+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:35:13.896509+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:35:19.547043+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:35:20.844272+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.742, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:35:29.459447+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:35:46.522824+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:35:47.828302+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:35:53.928892+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:36:22.099326+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:36:23.401536+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:36:28.280266+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:36:29.580697+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.738, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:36:38.952298+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:36:55.220697+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:36:56.521830+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:37:02.169340+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:37:30.272284+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:37:31.574095+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:37:36.611543+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:37:37.909438+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.736, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:37:47.632116+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:38:03.164546+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:38:04.467429+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:38:10.608996+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:38:38.601099+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:38:40.221624+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:38:45.909471+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:38:47.209249+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.739, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:38:57.048338+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:39:15.084670+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:39:16.386849+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:39:22.221638+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:39:52.152998+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:39:53.467871+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:39:58.374338+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:39:59.673957+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.733, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:40:09.422709+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:40:25.104247+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:40:26.405965+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:40:31.290450+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:40:58.675328+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:40:59.977282+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:41:05.169060+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:41:07.102185+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.738, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:41:16.471703+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:41:32.630958+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:41:33.940605+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:41:39.609422+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:42:09.172437+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:42:10.818121+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:42:16.150723+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:42:17.454418+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.748, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:42:25.907199+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:42:41.571037+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:42:42.875121+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:42:50.276996+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:43:21.108128+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:43:22.407204+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:43:28.366698+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:43:29.666511+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.749, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:43:38.241675+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:43:54.241216+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:43:55.546793+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:44:01.837619+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:44:29.400415+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:44:30.701619+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:44:35.455589+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:44:36.754669+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.747, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:44:45.665490+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:45:03.606169+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:45:04.918156+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:45:10.400154+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:45:38.054015+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:45:39.351650+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:45:44.060611+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:45:45.357708+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.745, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:45:55.526013+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:46:10.826842+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:46:12.131867+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:46:17.016998+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:46:46.098595+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:46:47.712292+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:46:52.921406+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:46:54.219374+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.745, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:47:03.938412+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:47:19.036458+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:47:20.338953+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.95, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:47:25.992106+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:47:54.724486+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:47:56.023719+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:48:00.898907+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:48:02.206652+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.747, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:48:10.749483+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:48:25.793573+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:48:27.101781+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.948, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:48:31.997957+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:49:01.528350+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:49:03.141185+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:49:09.416307+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:49:10.717145+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.749, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:49:19.208578+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:49:34.408339+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:49:35.718154+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.947, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:49:41.383020+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:50:10.753095+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:50:12.057291+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:50:17.412925+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8146, "qty": 61.0}
+{"ts": "2025-09-28T14:50:18.720453+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.751, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:50:27.437562+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:50:42.816557+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:50:44.117776+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:50:49.010349+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:51:18.899874+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:51:20.202706+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:51:26.524472+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.759, "qty": 61.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:51:35.877191+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:51:51.396725+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:51:53.011483+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:51:58.676562+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:52:26.928333+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:52:28.226419+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:52:39.317341+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:52:54.696772+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:52:56.310694+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:53:01.521147+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:53:30.262660+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:53:31.562792+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:53:42.646160+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:53:59.497878+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:54:00.807589+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:54:06.929354+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:54:37.205519+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:54:38.514512+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:54:49.598437+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:55:05.905788+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:55:07.206929+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:55:12.579753+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:55:40.416959+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:55:41.725391+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:55:52.907541+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:56:09.393989+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:56:10.698691+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:56:16.495000+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:56:44.479212+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:56:45.779551+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:56:56.847767+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:57:13.566322+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:57:14.880758+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.95, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:57:20.410995+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:57:48.527331+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:57:49.825325+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:58:01.484966+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:58:17.002844+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:58:18.303930+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:58:24.431353+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:58:53.190810+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:58:54.492603+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T14:59:05.719943+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T14:59:20.640439+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T14:59:21.939576+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T14:59:27.157575+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T14:59:55.637195+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T14:59:57.569946+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:00:08.905489+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:00:24.828250+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:00:26.126384+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:00:31.178134+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:01:00.545400+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:01:02.168189+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:01:10.307954+00:00", "event": "position_open_or_change", "symbol": "STBL", "side": "Buy", "qty": 312.0, "entry_price": 0.39942343}
+{"ts": "2025-09-28T15:01:14.494887+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:01:30.987357+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:01:32.292163+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.95, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:01:37.328249+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:02:06.855791+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:02:08.165496+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:02:19.485983+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:02:35.983573+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:02:37.282041+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:02:42.469119+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:03:12.356941+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:03:13.660146+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:03:25.157866+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:03:40.705046+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:03:42.006571+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:03:47.042623+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:04:16.223594+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:04:17.521460+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:04:29.477922+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:04:46.021280+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:04:47.270947+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.95, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:04:53.142794+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:05:21.361323+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:05:22.616358+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:05:33.768838+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:05:48.068709+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:05:49.315713+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:05:54.397102+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:06:21.683986+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:06:22.933965+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:06:34.289570+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:06:49.352452+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:06:50.600391+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.95, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:06:56.472296+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:07:23.380135+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:07:24.625685+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:07:36.216614+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:07:51.623620+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:07:52.870165+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.947, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:07:58.586870+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:08:25.516038+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:08:26.775772+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:08:38.397896+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:08:53.485535+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:08:54.736110+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.946, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:09:00.443351+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:09:27.981850+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:09:29.226883+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:09:41.178398+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:09:56.273820+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:09:57.527163+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.946, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:10:03.976007+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:10:31.463511+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:10:32.717491+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:10:43.691308+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:10:58.446248+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:10:59.705501+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.947, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:11:04.823844+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:11:32.666179+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:11:33.931134+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:11:47.407124+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:12:02.020690+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:12:03.293793+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.946, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:12:08.054440+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:12:34.197131+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:12:35.443299+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:12:47.355255+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:13:02.935779+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:13:04.189195+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.947, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:13:09.751461+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:13:36.035951+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:13:37.283513+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:13:47.944804+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:14:02.084872+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:14:03.343437+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.948, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:14:08.884371+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:14:36.593251+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:14:37.848757+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:14:48.107469+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:15:03.309417+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:15:04.559059+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.948, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:15:09.842978+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:15:36.806449+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:15:38.051837+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:15:49.544400+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:16:03.851142+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:16:05.104444+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.95, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:16:09.870110+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:16:38.127552+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:16:39.383893+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:16:51.606873+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:17:06.073761+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:17:07.328027+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:17:12.578345+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:17:39.022189+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:17:40.266467+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:17:53.007108+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:18:08.752917+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:18:10.004789+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:18:16.180932+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:18:43.783064+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:18:45.654751+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:18:57.395637+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:19:12.319724+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:19:13.583896+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:19:18.191196+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:19:45.772904+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:19:47.333888+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:19:58.306239+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:20:12.918908+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:20:14.181288+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:20:21.330355+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:20:49.024454+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:20:50.275767+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:21:01.314343+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:21:16.081562+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:21:18.272829+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:21:24.593150+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:21:51.749376+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:21:53.004611+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.031, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:22:03.226904+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:22:17.269836+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:22:18.519377+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:22:23.294217+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:22:49.567777+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Sell", "price": 0.03277, "qty": 3400.0}
+{"ts": "2025-09-28T15:22:50.816521+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Sell", "trigger_price": 0.032, "qty": 3400.0, "trigger_direction": 2}
+{"ts": "2025-09-28T15:23:01.668156+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:23:15.922248+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:23:17.180469+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:23:23.081340+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:23:57.924718+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:24:12.085774+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:24:13.350086+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:24:17.963060+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:24:54.108249+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:25:08.474133+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:25:09.719031+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:25:14.806383+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:25:48.622140+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:26:04.973826+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:26:06.226870+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:26:11.455395+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:26:47.177402+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:27:02.056269+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:27:03.306381+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:27:08.876803+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:27:44.303096+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:27:59.752554+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:28:01.008387+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:28:06.080366+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:28:40.034161+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:28:54.493696+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:28:55.739709+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:29:00.714962+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:29:34.409413+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:29:48.411434+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:29:49.658502+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:29:55.203397+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:30:30.112233+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:30:44.254909+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:30:45.507068+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.959, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:30:50.146697+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:31:24.946491+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:31:39.288951+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:31:40.536481+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.962, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:31:46.086855+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:32:21.749195+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:32:37.983072+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:32:39.238077+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.964, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:32:44.326959+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:33:19.131436+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:33:35.144382+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:33:36.397086+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.963, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:33:42.023082+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:34:16.237464+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:34:31.980695+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:34:33.236090+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.964, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:34:38.637479+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:35:13.331837+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:35:27.633344+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:35:28.882630+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:35:35.223863+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:36:09.472946+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:36:23.802967+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:36:25.056083+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:36:29.678080+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:37:06.460957+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:37:22.096401+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:37:23.341917+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:37:28.407889+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:38:03.432088+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:38:17.403325+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:38:18.646987+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:38:23.866297+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:38:59.096289+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:39:14.985991+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:39:16.229266+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.958, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:39:21.455408+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:39:56.470872+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:40:12.790377+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:40:14.038545+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:40:19.589439+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:40:54.444511+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:41:09.881354+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:41:11.128335+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:41:15.881601+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:41:53.086835+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:42:10.924096+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:42:12.595213+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:42:18.676806+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:43:01.397978+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:43:17.390853+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:43:18.753906+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:43:24.054046+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:44:05.702584+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:44:24.036113+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:44:25.388661+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:44:31.634314+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:45:11.477653+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:45:28.665808+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:45:30.031861+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:45:36.123169+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:46:16.199513+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:46:33.157332+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:46:34.515615+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.951, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:46:39.850607+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:47:20.505017+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:47:37.443024+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:47:38.799986+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:47:45.041915+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:48:25.595027+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:48:41.782582+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:48:43.137321+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:48:48.596973+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:49:29.331839+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:49:45.512068+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:49:47.183225+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:49:53.900958+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:50:32.267035+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:50:49.071579+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:50:50.427799+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.962, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:50:56.818252+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:51:38.400568+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:51:55.350184+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:51:56.708618+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:52:02.034717+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:52:41.453469+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:52:59.819638+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:53:01.173614+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:53:07.436943+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:53:48.019607+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:54:03.867775+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:54:05.224513+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:54:11.146012+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:54:50.192519+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:55:06.625551+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:55:07.979280+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.961, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:55:13.709808+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:55:54.487113+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:56:11.037656+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:56:12.381923+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.961, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:56:18.090918+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:56:58.015384+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:57:15.166839+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:57:16.519236+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.962, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:57:23.201137+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:58:02.835631+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:58:18.513698+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:58:20.167292+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.959, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:58:25.427310+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T15:59:03.987950+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T15:59:19.651600+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T15:59:21.318341+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.958, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T15:59:27.334103+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:00:06.564495+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:00:22.910554+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:00:24.558684+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.958, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:00:30.306434+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:01:09.671922+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:01:26.208386+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:01:27.571565+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.958, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:01:33.469091+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:02:11.944568+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:02:27.751081+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:02:29.099142+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:02:34.238096+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:03:12.796938+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:03:31.377510+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:03:32.736470+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.963, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:03:38.936332+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:04:18.121093+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:04:35.455056+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:04:36.803873+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.962, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:04:43.165104+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:05:21.634022+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:05:39.060625+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:05:40.417693+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.963, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:05:45.807452+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:06:24.167038+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:06:41.732371+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:06:43.088409+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.965, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:06:49.487092+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:07:28.790243+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:07:47.378828+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:07:48.732026+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.968, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:07:54.773712+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:08:34.197306+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:08:50.987798+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:08:52.338097+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.971, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:08:57.769191+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:09:37.002492+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:09:53.410005+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:09:54.761225+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.968, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:10:00.621497+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:10:42.137638+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:10:58.404979+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:10:59.757823+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.966, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:11:05.072964+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:11:45.569942+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:12:01.409645+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:12:02.756680+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.966, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:12:08.507626+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:12:49.175447+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:13:05.342153+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:13:06.687056+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.964, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:13:12.238647+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:13:51.481894+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:14:08.117212+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:14:09.474232+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.963, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:14:14.784032+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:14:55.057276+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:15:11.957897+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:15:13.320539+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.966, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:15:18.420320+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:15:59.561836+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:16:15.842369+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:16:17.193751+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.963, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:16:22.950027+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:17:03.058576+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:17:19.248942+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:17:20.602173+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.966, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:17:26.035357+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:18:05.699297+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:18:21.579805+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:18:22.937990+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.966, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:18:28.658518+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:19:07.341292+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:19:23.102336+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:19:24.457793+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.964, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:19:29.574868+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:20:08.630205+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:20:24.560525+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:20:25.904494+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.962, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:20:31.209903+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:21:11.554451+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:21:28.239835+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:21:29.617368+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.961, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:21:34.890366+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:22:17.371372+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:22:35.398663+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:22:36.934009+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.961, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:22:43.909569+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:23:29.526433+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:23:46.448785+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:23:47.984461+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.966, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:23:53.354591+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:24:41.598089+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:25:01.633851+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:25:02.890457+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.966, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:25:08.771217+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:25:48.574430+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:26:07.025475+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:26:08.555563+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.965, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:26:14.189051+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:26:55.104904+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:27:12.010791+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:27:13.543735+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.965, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:27:19.565886+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:27:56.516723+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:28:12.003625+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:28:13.266376+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:28:20.397041+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:29:03.806346+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:29:18.700786+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:29:19.955213+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.961, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:29:25.593828+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:30:14.854552+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:30:36.213312+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:30:37.745415+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:30:44.588434+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:31:25.590820+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:31:45.082074+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:31:46.624966+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:31:53.184188+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:32:39.805677+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:32:59.291352+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:33:00.564916+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:33:06.880818+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:33:55.474764+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:34:14.743491+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:34:16.005896+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:34:21.903881+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:35:01.579148+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:35:22.736047+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:35:24.003822+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.956, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:35:30.552090+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:36:18.303019+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:36:36.506569+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:36:38.064166+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.955, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:36:43.679787+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:37:25.133358+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:37:40.655603+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:37:41.919243+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:37:47.934616+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:38:34.156810+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:38:53.384053+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:38:54.641719+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:39:00.551173+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:39:42.550121+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:40:04.408900+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:40:05.942499+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.953, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:40:12.542937+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:40:58.850844+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:41:15.192795+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:41:16.451833+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.952, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:41:24.225406+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:42:04.382537+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:42:21.594364+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:42:22.868768+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.954, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:42:28.930010+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:43:05.270837+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:43:23.083960+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:43:24.634022+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.957, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:43:30.392571+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:44:19.147224+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:44:37.934418+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:44:39.512342+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.958, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:44:46.151236+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:45:31.555629+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:45:53.196830+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:45:54.766723+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.959, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:46:01.147585+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:46:48.567320+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:47:08.200980+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:47:09.497428+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:47:15.326086+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:48:02.163523+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:48:21.427267+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:48:23.008086+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.96, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:48:30.179057+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:49:16.749901+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:49:36.492089+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:49:38.063176+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.962, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:49:44.713027+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:50:25.553032+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:50:46.338101+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:50:47.637910+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.961, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:50:54.282445+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:51:42.650473+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:52:01.564229+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:52:02.873945+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.965, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:52:09.661408+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:52:52.921239+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:53:12.713620+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:53:14.284937+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.967, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:53:20.396013+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:54:04.817530+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:54:25.128756+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:54:26.697143+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.968, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:54:32.931848+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:55:20.905820+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:55:39.857544+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:55:41.434321+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.97, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:55:47.697973+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:56:32.418321+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:56:52.216249+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:56:53.792160+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.97, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:57:00.430493+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:57:41.748449+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:58:01.451647+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:58:02.761169+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.97, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:58:08.316136+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T16:58:48.476056+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T16:59:07.383552+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T16:59:08.957337+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.97, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T16:59:15.050366+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:00:00.564505+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:00:16.519721+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T17:00:18.087431+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.969, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:00:25.144661+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:01:03.893270+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:01:19.479601+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T17:01:21.047063+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.974, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:01:27.715488+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:02:07.232070+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:02:22.721345+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T17:02:24.291861+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.969, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:02:30.540207+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:03:15.315692+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:03:34.207092+00:00", "event": "tp_set", "symbol": "BARD", "side": "Sell", "price": 1.00783, "qty": 110.9}
+{"ts": "2025-09-28T17:03:35.506123+00:00", "event": "sl_set", "symbol": "BARD", "side": "Sell", "trigger_price": 0.973, "qty": 110.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:03:41.335337+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:04:22.407657+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:04:40.803179+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:04:42.858371+00:00", "event": "position_open_or_change", "symbol": "AKE", "side": "Sell", "qty": 63700.0, "entry_price": 0.00175991}
+{"ts": "2025-09-28T17:04:45.809653+00:00", "event": "tp_set", "symbol": "AKE", "side": "Buy", "price": 0.001716, "qty": 63700.0}
+{"ts": "2025-09-28T17:04:47.378393+00:00", "event": "sl_set", "symbol": "AKE", "side": "Buy", "trigger_price": 0.002, "qty": 63700.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:05:32.036819+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:05:55.380774+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:06:01.471888+00:00", "event": "tp_set", "symbol": "AKE", "side": "Buy", "price": 0.001716, "qty": 63700.0}
+{"ts": "2025-09-28T17:06:03.045303+00:00", "event": "sl_set", "symbol": "AKE", "side": "Buy", "trigger_price": 0.002, "qty": 63700.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:06:40.547458+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:06:58.925567+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:07:06.061807+00:00", "event": "tp_set", "symbol": "AKE", "side": "Buy", "price": 0.001716, "qty": 63700.0}
+{"ts": "2025-09-28T17:07:07.395652+00:00", "event": "sl_set", "symbol": "AKE", "side": "Buy", "trigger_price": 0.002, "qty": 63700.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:07:43.250638+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:08:02.056244+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:08:09.195213+00:00", "event": "tp_set", "symbol": "AKE", "side": "Buy", "price": 0.001716, "qty": 63700.0}
+{"ts": "2025-09-28T17:08:10.530781+00:00", "event": "sl_set", "symbol": "AKE", "side": "Buy", "trigger_price": 0.002, "qty": 63700.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:08:46.425135+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:09:03.859886+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:09:09.387156+00:00", "event": "tp_set", "symbol": "AKE", "side": "Buy", "price": 0.001716, "qty": 63700.0}
+{"ts": "2025-09-28T17:09:10.721148+00:00", "event": "sl_set", "symbol": "AKE", "side": "Buy", "trigger_price": 0.002, "qty": 63700.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:09:46.819231+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:10:04.563832+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:10:09.790629+00:00", "event": "tp_set", "symbol": "AKE", "side": "Buy", "price": 0.001716, "qty": 63700.0}
+{"ts": "2025-09-28T17:10:11.129520+00:00", "event": "sl_set", "symbol": "AKE", "side": "Buy", "trigger_price": 0.002, "qty": 63700.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:10:46.207260+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:11:04.156029+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:11:46.040503+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:12:04.246134+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:12:11.183286+00:00", "event": "position_open_or_change", "symbol": "H", "side": "Sell", "qty": 1450.0, "entry_price": 0.077736}
+{"ts": "2025-09-28T17:12:13.821334+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:12:15.160655+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:12:44.900248+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:13:02.774097+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:13:14.531022+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:13:15.868982+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:13:45.458580+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:14:03.027975+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:14:15.513810+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:14:16.849218+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:14:46.777822+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:15:04.211798+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:15:14.328127+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:15:15.665326+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:15:46.908689+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:16:04.677851+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:16:15.425708+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:16:16.766850+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:16:46.169158+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:17:03.501857+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:17:13.646630+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:17:14.983129+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:17:45.701247+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:18:03.779064+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:18:14.686416+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:18:16.022571+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:18:46.584854+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:19:04.963165+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:19:15.737881+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:19:17.071918+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:19:47.547417+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:20:05.394071+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:20:15.371009+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:20:16.712719+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:20:45.776089+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:21:03.580484+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:21:13.747768+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:21:15.092826+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:21:44.832339+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:22:03.009266+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:22:13.933496+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:22:15.281457+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:22:45.914343+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:23:04.313690+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:23:14.926181+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:23:16.276476+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:23:46.378766+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:24:04.859415+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:24:15.007289+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:24:16.347755+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:24:47.371174+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:25:05.904263+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:25:16.663208+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:25:17.995397+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:25:47.947918+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:26:05.052225+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:26:15.217032+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:26:16.554788+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:26:46.835406+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:27:04.410023+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:27:14.992803+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:27:16.329361+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:27:46.733730+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:28:04.313707+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:28:15.250634+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:28:16.593356+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:28:46.673401+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:29:04.566584+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:29:15.450557+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:29:16.788055+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:29:46.684127+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:30:05.840387+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:30:16.766531+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:30:18.111255+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:30:48.371093+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:31:06.526270+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:31:16.643212+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:31:17.981443+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:31:43.996250+00:00", "event": "position_open_or_change", "symbol": "STBL", "side": "Buy", "qty": 282.0, "entry_price": 0.39836}
+{"ts": "2025-09-28T17:31:47.571594+00:00", "event": "sl_set", "symbol": "STBL", "side": "Sell", "trigger_price": 0.387, "qty": 282.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:32:06.065885+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:32:16.812458+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:32:18.155391+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:32:46.781823+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:33:05.203349+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:33:15.808494+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:33:17.150844+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:33:46.703257+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:34:04.749807+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:34:15.534442+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:34:16.871840+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:34:45.757543+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:35:05.122704+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:35:15.433633+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:35:16.780959+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:35:45.353731+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:36:05.280030+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:36:16.038815+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:36:17.383238+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:36:45.896377+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:37:04.274588+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:37:14.741302+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:37:16.090254+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:37:45.303046+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:38:03.698028+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:38:14.756942+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:38:16.098903+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:38:44.673189+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:39:05.068709+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:39:16.293180+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:39:17.630119+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:39:47.028808+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:40:06.701265+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:40:17.318784+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:40:18.659856+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:40:48.308584+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:41:07.415634+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:41:17.873688+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:41:19.211378+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:41:47.792169+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:42:06.957563+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:42:18.664590+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:42:20.002311+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:42:49.203926+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:43:08.804953+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:43:19.741066+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:43:21.075062+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:43:50.137648+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:44:08.979262+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:44:20.541091+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:44:21.879486+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.08, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:44:51.308983+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:45:12.898087+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:45:25.603490+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:45:26.903454+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:46:04.774433+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:46:27.249400+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:46:40.687717+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:46:42.261193+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:47:20.995760+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:47:42.225236+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:47:54.562670+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:47:55.861900+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:48:34.419789+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:48:55.371956+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:49:08.203449+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:49:09.771347+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:49:42.508597+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:50:03.814451+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:50:16.494807+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:50:17.794260+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:50:55.889204+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:51:18.053099+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:51:29.784102+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:51:31.092153+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:52:09.339237+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:52:32.155947+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:52:44.285251+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.075793, "qty": 1450.0}
+{"ts": "2025-09-28T17:52:45.862688+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.079, "qty": 1450.0, "trigger_direction": 1}
+{"ts": "2025-09-28T17:53:20.406974+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:53:38.556521+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:54:09.104130+00:00", "event": "position_open_or_change", "symbol": "AVNT", "side": "Buy", "qty": 81.0, "entry_price": 1.3947}
+{"ts": "2025-09-28T17:54:12.581194+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T17:54:14.428813+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.352, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:54:24.570435+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:54:46.312640+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:54:49.313695+00:00", "event": "position_open_or_change", "symbol": "MIRA", "side": "Buy", "qty": 105.9, "entry_price": 1.07485524}
+{"ts": "2025-09-28T17:54:52.540440+00:00", "event": "tp_set", "symbol": "MIRA", "side": "Sell", "price": 1.1017, "qty": 105.9}
+{"ts": "2025-09-28T17:54:54.114781+00:00", "event": "sl_set", "symbol": "MIRA", "side": "Sell", "trigger_price": 1.044, "qty": 105.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:55:30.469151+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T17:55:32.307507+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.35, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:55:41.009974+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:56:03.502924+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:56:11.467216+00:00", "event": "tp_set", "symbol": "MIRA", "side": "Sell", "price": 1.1017, "qty": 105.9}
+{"ts": "2025-09-28T17:56:12.765945+00:00", "event": "sl_set", "symbol": "MIRA", "side": "Sell", "trigger_price": 1.06, "qty": 105.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:56:13.711304+00:00", "event": "position_open_or_change", "symbol": "HEMI", "side": "Buy", "qty": 1073.0, "entry_price": 0.10564}
+{"ts": "2025-09-28T17:56:16.775945+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T17:56:18.352257+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:56:23.511602+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T17:56:24.805183+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.35, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:56:27.790737+00:00", "event": "position_open_or_change", "symbol": "0G", "side": "Sell", "qty": 29.7, "entry_price": 3.833}
+{"ts": "2025-09-28T17:56:31.685157+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T17:56:32.983297+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.932, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T17:56:38.195860+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:56:58.908173+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:57:05.002176+00:00", "event": "tp_set", "symbol": "MIRA", "side": "Sell", "price": 1.1017, "qty": 105.9}
+{"ts": "2025-09-28T17:57:06.298876+00:00", "event": "sl_set", "symbol": "MIRA", "side": "Sell", "trigger_price": 1.059, "qty": 105.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:57:10.866351+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T17:57:12.438949+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:57:16.628771+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T17:57:17.941087+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.345, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:57:25.275052+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T17:57:26.571334+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.937, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T17:57:31.954815+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:57:53.688399+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:58:00.694610+00:00", "event": "tp_set", "symbol": "MIRA", "side": "Sell", "price": 1.1017, "qty": 105.9}
+{"ts": "2025-09-28T17:58:02.542545+00:00", "event": "sl_set", "symbol": "MIRA", "side": "Sell", "trigger_price": 1.058, "qty": 105.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:58:07.807450+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T17:58:09.373277+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:58:13.298650+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T17:58:14.598117+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.344, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:58:21.097109+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T17:58:22.396084+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.964, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T17:58:27.457080+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:58:49.309837+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:58:56.348696+00:00", "event": "tp_set", "symbol": "MIRA", "side": "Sell", "price": 1.1017, "qty": 105.9}
+{"ts": "2025-09-28T17:58:57.654979+00:00", "event": "sl_set", "symbol": "MIRA", "side": "Sell", "trigger_price": 1.06, "qty": 105.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:59:02.358562+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T17:59:03.663099+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:59:08.253645+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T17:59:10.102288+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.343, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T17:59:16.458003+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T17:59:17.755584+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.969, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T17:59:22.560881+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T17:59:43.647247+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T17:59:50.147273+00:00", "event": "tp_set", "symbol": "MIRA", "side": "Sell", "price": 1.1017, "qty": 105.9}
+{"ts": "2025-09-28T17:59:51.444279+00:00", "event": "sl_set", "symbol": "MIRA", "side": "Sell", "trigger_price": 1.057, "qty": 105.9, "trigger_direction": 2}
+{"ts": "2025-09-28T17:59:56.271394+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T17:59:57.842918+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:00:04.263527+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:00:05.562420+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.347, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:00:12.341082+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:00:13.650157+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.968, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:00:19.173902+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:00:40.125289+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:00:41.070231+00:00", "event": "position_open_or_change", "symbol": "BLESS", "side": "Sell", "qty": 3220.0, "entry_price": 0.03543}
+{"ts": "2025-09-28T18:00:44.224680+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:00:45.524162+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:00:45.713506+00:00", "event": "position_open_or_change", "symbol": "AIA", "side": "Sell", "qty": 344.0, "entry_price": 0.33037209}
+{"ts": "2025-09-28T18:00:49.463038+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:00:51.038147+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.34, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:00:56.020098+00:00", "event": "tp_set", "symbol": "MIRA", "side": "Sell", "price": 1.1017, "qty": 105.9}
+{"ts": "2025-09-28T18:00:57.328416+00:00", "event": "sl_set", "symbol": "MIRA", "side": "Sell", "trigger_price": 1.063, "qty": 105.9, "trigger_direction": 2}
+{"ts": "2025-09-28T18:00:57.517260+00:00", "event": "position_open_or_change", "symbol": "ASTER", "side": "Buy", "qty": 63.0, "entry_price": 1.8077}
+{"ts": "2025-09-28T18:01:01.277496+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:01:03.121591+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.751, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:01:07.174834+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:01:08.478643+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:01:12.940489+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:01:14.233746+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.352, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:01:20.996320+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:01:22.294903+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.941, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:01:27.507565+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:01:49.742144+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:01:54.722716+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:01:56.022793+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:02:00.099842+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:02:01.406010+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.34, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:02:06.959534+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:02:08.259408+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.752, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:02:12.314050+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:02:13.882286+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:02:18.481227+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:02:19.779675+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.357, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:02:26.565732+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:02:27.864690+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.936, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:02:32.644955+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:02:54.449447+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:02:59.297217+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:03:00.593771+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:03:03.721761+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:03:05.016106+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.339, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:03:10.882022+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:03:12.453863+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.751, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:03:16.625125+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:03:18.200063+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:03:22.251039+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:03:23.548776+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.358, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:03:30.185096+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:03:31.480496+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.945, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:03:37.685523+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:03:59.037085+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:04:04.300812+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:04:05.607224+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:04:09.019323+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:04:10.317320+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.34, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:04:15.125372+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:04:16.424736+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.753, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:04:20.194220+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:04:22.043010+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:04:26.480852+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:04:27.780305+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.359, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:04:35.869843+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:04:37.177089+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.891, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:04:42.532192+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:05:03.630980+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:05:07.923727+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:05:09.226985+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:05:13.203425+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:05:14.770280+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.34, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:05:20.138599+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:05:21.445676+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.755, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:05:25.246593+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:05:26.544119+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:05:31.667722+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:05:33.232924+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.356, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:05:39.167120+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:05:40.469991+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.876, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:05:45.539569+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:06:06.567978+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:06:11.825529+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:06:13.120825+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:06:16.388043+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:06:17.691963+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.341, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:06:23.313186+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:06:24.880199+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.761, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:06:28.673331+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:06:29.973451+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:06:34.701256+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:06:35.999872+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.361, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:06:42.494898+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:06:43.785753+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.861, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:06:48.872253+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:07:09.518284+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:07:14.496451+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:07:16.067644+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:07:20.559549+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:07:21.861299+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.342, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:07:27.759927+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:07:29.057940+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.766, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:07:33.238331+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:07:34.532841+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:07:38.588289+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:07:40.155873+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.361, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:07:45.809647+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:07:47.110947+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.857, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:07:51.795426+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:08:13.827157+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:08:18.652752+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:08:20.222705+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:08:23.760782+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:08:25.060910+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.343, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:08:30.140730+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:08:31.440860+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.781, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:08:35.511455+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:08:36.811144+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:08:40.864682+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:08:42.440130+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.357, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:08:48.801802+00:00", "event": "tp_set", "symbol": "0G", "side": "Buy", "price": 3.7372, "qty": 29.7}
+{"ts": "2025-09-28T18:08:50.104458+00:00", "event": "sl_set", "symbol": "0G", "side": "Buy", "trigger_price": 3.855, "qty": 29.7, "trigger_direction": 1}
+{"ts": "2025-09-28T18:08:54.559094+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:09:16.316956+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:09:21.142035+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:09:22.441967+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:09:26.782562+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:09:28.080287+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.341, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:09:33.301544+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:09:34.873031+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.787, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:09:38.644314+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:09:39.943434+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:09:43.848640+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:09:45.157267+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.356, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:09:51.286007+00:00", "event": "sl_exists", "symbol": "0G"}
+{"ts": "2025-09-28T18:09:57.199578+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:10:17.990368+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:10:22.669049+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:10:23.969433+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:10:28.058873+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:10:29.359054+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.341, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:10:34.731029+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:10:36.035405+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.786, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:10:39.547525+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:10:41.115553+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:10:45.971519+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:10:47.299806+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.353, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:10:49.370639+00:00", "event": "position_open_or_change", "symbol": "H", "side": "Sell", "qty": 1530.0, "entry_price": 0.075107}
+{"ts": "2025-09-28T18:10:52.052343+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.073229, "qty": 1530.0}
+{"ts": "2025-09-28T18:10:54.163154+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.077, "qty": 1530.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:11:01.314541+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:11:22.511991+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:11:27.477294+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:11:28.780226+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:11:32.468558+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:11:33.767568+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.341, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:11:39.919070+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:11:41.215263+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.786, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:11:45.259158+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:11:46.567276+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:11:50.934661+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:11:52.236050+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.354, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:11:58.874968+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.073229, "qty": 1530.0}
+{"ts": "2025-09-28T18:12:00.171907+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.077, "qty": 1530.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:12:06.447925+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:12:28.403734+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:12:32.993037+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:12:34.296873+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:12:38.242954+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:12:39.541817+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.341, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:12:45.269670+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:12:46.851738+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.784, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:12:51.047104+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:12:52.344335+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:12:56.518990+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:12:58.086044+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.352, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:13:04.464833+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.073229, "qty": 1530.0}
+{"ts": "2025-09-28T18:13:05.764312+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.077, "qty": 1530.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:13:11.132521+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:13:31.272306+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:13:36.531325+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:13:38.371709+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:13:42.733036+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:13:44.032570+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.34, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:13:49.121549+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:13:50.425661+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.788, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:13:54.370422+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:13:55.671306+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:13:59.999605+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:14:01.317007+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.357, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:14:07.565675+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.073229, "qty": 1530.0}
+{"ts": "2025-09-28T18:14:08.864593+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.077, "qty": 1530.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:14:14.616179+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:14:35.328701+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:14:40.441018+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:14:42.283735+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:14:46.096800+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:14:47.398331+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.34, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:14:53.539483+00:00", "event": "tp_set", "symbol": "ASTER", "side": "Sell", "price": 1.8529, "qty": 63.0}
+{"ts": "2025-09-28T18:14:55.110045+00:00", "event": "sl_set", "symbol": "ASTER", "side": "Sell", "trigger_price": 1.786, "qty": 63.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:14:58.758779+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:15:00.334493+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:15:05.167694+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:15:06.741846+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.355, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:15:13.003451+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.073229, "qty": 1530.0}
+{"ts": "2025-09-28T18:15:14.302987+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.076, "qty": 1530.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:15:20.826490+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:15:43.046953+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:15:48.577643+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:15:49.882011+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:15:53.582944+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:15:54.881306+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.34, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:16:00.645450+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:16:01.942204+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:16:05.491804+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:16:06.796057+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.359, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:16:13.195654+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.073229, "qty": 1530.0}
+{"ts": "2025-09-28T18:16:14.497224+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.076, "qty": 1530.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:16:20.617583+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:16:41.803094+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:16:46.088658+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:16:47.390834+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.037, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:16:51.598555+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:16:52.904655+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.34, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:16:59.128459+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:17:00.430419+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:17:04.639491+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:17:05.941932+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.357, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:17:12.339794+00:00", "event": "tp_set", "symbol": "H", "side": "Buy", "price": 0.073229, "qty": 1530.0}
+{"ts": "2025-09-28T18:17:13.643337+00:00", "event": "sl_set", "symbol": "H", "side": "Buy", "trigger_price": 0.076, "qty": 1530.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:17:18.858265+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:17:40.264832+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:17:45.782645+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:17:47.082429+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.036, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:17:51.165377+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:17:52.463456+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.339, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:17:58.954735+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:18:00.250278+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:18:05.113145+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:18:06.413143+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.356, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:18:15.005233+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:18:30.602969+00:00", "event": "position_open_or_change", "symbol": "ALPINE", "side": "Buy", "qty": 20.9, "entry_price": 5.593}
+{"ts": "2025-09-28T18:18:33.999895+00:00", "event": "tp_set", "symbol": "ALPINE", "side": "Sell", "price": 5.733, "qty": 20.9}
+{"ts": "2025-09-28T18:18:35.296373+00:00", "event": "sl_set", "symbol": "ALPINE", "side": "Sell", "trigger_price": 5.436, "qty": 20.9, "trigger_direction": 2}
+{"ts": "2025-09-28T18:18:41.041762+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:18:46.163406+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:18:47.474239+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.036, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:18:51.973341+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:18:53.274473+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.339, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:18:58.703208+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:19:00.004618+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:19:05.944990+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:19:07.780769+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.358, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:19:17.290213+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:19:35.422321+00:00", "event": "tp_set", "symbol": "ALPINE", "side": "Sell", "price": 5.733, "qty": 20.9}
+{"ts": "2025-09-28T18:19:36.735154+00:00", "event": "sl_set", "symbol": "ALPINE", "side": "Sell", "trigger_price": 5.446, "qty": 20.9, "trigger_direction": 2}
+{"ts": "2025-09-28T18:19:42.461414+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:19:46.348305+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:19:47.647424+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.036, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:19:51.195489+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:19:52.490970+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.339, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:19:58.319211+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:20:00.161849+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.103, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:20:04.232884+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:20:05.532180+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.36, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:20:15.173126+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:20:34.149036+00:00", "event": "tp_set", "symbol": "ALPINE", "side": "Sell", "price": 5.733, "qty": 20.9}
+{"ts": "2025-09-28T18:20:35.726075+00:00", "event": "sl_set", "symbol": "ALPINE", "side": "Sell", "trigger_price": 5.452, "qty": 20.9, "trigger_direction": 2}
+{"ts": "2025-09-28T18:20:40.946024+00:00", "event": "sl_exists", "symbol": "SNX"}
+{"ts": "2025-09-28T18:20:45.386433+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.03454, "qty": 3220.0}
+{"ts": "2025-09-28T18:20:46.689764+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.036, "qty": 3220.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:20:51.186996+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.3221, "qty": 344.0}
+{"ts": "2025-09-28T18:20:52.489712+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.339, "qty": 344.0, "trigger_direction": 1}
+{"ts": "2025-09-28T18:20:59.155703+00:00", "event": "tp_set", "symbol": "HEMI", "side": "Sell", "price": 0.10828, "qty": 1073.0}
+{"ts": "2025-09-28T18:21:00.721239+00:00", "event": "sl_set", "symbol": "HEMI", "side": "Sell", "trigger_price": 0.102, "qty": 1073.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:21:05.318128+00:00", "event": "tp_set", "symbol": "AVNT", "side": "Sell", "price": 1.4296, "qty": 81.0}
+{"ts": "2025-09-28T18:21:06.888229+00:00", "event": "sl_set", "symbol": "AVNT", "side": "Sell", "trigger_price": 1.354, "qty": 81.0, "trigger_direction": 2}
+{"ts": "2025-09-28T18:21:15.469821+00:00", "event": "sl_exists", "symbol": "STBL"}
+{"ts": "2025-09-28T18:55:07.615412+00:00", "event": "daily_stop_loss", "daily_pct": -100.0, "daily_usd": -338.50374167, "closed_ok": 0, "closed_err": 1}
+{"ts": "2025-09-28T18:55:07.616257+00:00", "event": "daily_stop", "reason": "max_dd", "daily_pct": -100.0, "daily_usd": -338.50374167}

@@ -167,6 +167,9 @@ def send_telegram(message: str):
 # Daily state + IM helpers
 DAILY_STATE_PATH = Path('../state/daily_pnl.json')
 PNL_CSV_PATH = Path('pnl_log.csv')
+EVENTS_DIR = Path('../logs/events')
+SNAPSHOT_DIR = Path('../logs/snapshots')
+EVENTS_DIR = Path('../logs/events')
 
 def _utc_date_str(ts: float | None = None) -> str:
     dt = datetime.now(timezone.utc) if ts is None else datetime.fromtimestamp(ts, tz=timezone.utc)
@@ -189,6 +192,18 @@ def get_equity(client) -> float:
         print(f"[EQUITY] error: {e}")
         return 0.0
 
+def load_risk_thresholds() -> tuple[float, float]:
+    """Hot‑reload daily target and max drawdown from settings.json each loop."""
+    try:
+        with open('../settings.json', 'r') as f:
+            s = json.load(f)
+        rm = s.get('risk_management', {}) or {}
+        tgt = float(rm.get('daily_target_pct', 10))
+        dd = float(rm.get('daily_max_dd_pct', 5))
+        return tgt, dd
+    except Exception:
+        return 10.0, 5.0
+
 def compute_im_percent(client) -> float:
     try:
         sess = getattr(client, '_session', None)
@@ -208,7 +223,7 @@ def compute_im_percent(client) -> float:
                 pass
             # Approx from positions
             im_sum = 0.0
-            rp = sess.get_positions(category="linear")
+            rp = sess.get_positions(category="linear", settleCoin="USDT")
             for p in (rp.get('result', {}) or {}).get('list', []) or []:
                 size = float(p.get('size') or 0)
                 if size <= 0:
@@ -259,7 +274,7 @@ def update_closed_trades_counter():
         sess = getattr(client, '_session', None)
         if sess is None:
             return
-        r = sess.get_positions(category="linear")
+        r = sess.get_positions(category="linear", settleCoin="USDT")
         current = set()
         for p in (r.get('result', {}) or {}).get('list', []) or []:
             if float(p.get('size') or 0) > 0:
@@ -287,10 +302,69 @@ def log_pnl_csv(daily_profit_pct: float, daily_profit_usd: float):
     except Exception as e:
         print(f"[PNL-CSV] error: {e}")
 
+def log_event(event: str, data: dict):
+    """Append a JSONL event for later analytics."""
+    try:
+        EVENTS_DIR.mkdir(parents=True, exist_ok=True)
+        path = EVENTS_DIR / f"{_utc_date_str()}.jsonl"
+        row = {"ts": datetime.now(timezone.utc).isoformat(), "event": event}
+        row.update(data or {})
+        with open(path, 'a') as f:
+            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    except Exception as e:
+        print(f"[EVENT] log error: {e}")
+
+def set_trading_stopped_today(reason: str, daily_pct: float, daily_usd: float):
+    """Persist 'stopped' flag for today and set trading_disabled.flag to avoid loops."""
+    try:
+        state = _load_daily_state()
+        state['stopped'] = True
+        state['stop_reason'] = reason
+        state['stop_ts'] = datetime.now(timezone.utc).isoformat()
+        _save_daily_state(state)
+        # Create global disable flag respected by loops
+        Path('../trading_disabled.flag').write_text('1')
+        log_event('daily_stop', {"reason": reason, "daily_pct": daily_pct, "daily_usd": daily_usd})
+    except Exception as e:
+        print(f"[DAILY-STOP] persist error: {e}")
+
+def snapshot_state(equity_now: float, daily_pct: float, im_pct: float):
+    """Write a periodic snapshot (equity, IM%, open positions) for analytics."""
+    try:
+        SNAPSHOT_DIR.mkdir(parents=True, exist_ok=True)
+        sess = getattr(client, '_session', None)
+        pos_list = []
+        if sess is not None:
+            r = sess.get_positions(category="linear", settleCoin="USDT")
+            for p in (r.get('result', {}) or {}).get('list', []) or []:
+                size = float(p.get('size') or 0)
+                if size <= 0:
+                    continue
+                pos_list.append({
+                    'symbol': p.get('symbol', ''),
+                    'side': p.get('side', ''),
+                    'size': size,
+                    'avgPrice': float(p.get('avgPrice') or 0),
+                    'markPrice': float(p.get('markPrice') or 0),
+                    'leverage': float(p.get('leverage') or 0),
+                })
+        row = {
+            'ts': datetime.now(timezone.utc).isoformat(),
+            'equity': equity_now,
+            'daily_pct': daily_pct,
+            'im_pct': im_pct,
+            'positions': pos_list,
+        }
+        path = SNAPSHOT_DIR / f"{_utc_date_str()}.jsonl"
+        with open(path, 'a') as f:
+            f.write(json.dumps(row) + "\n")
+    except Exception as e:
+        print(f"[SNAPSHOT] error: {e}")
+
 def _round_qty_for_symbol(symbol: str, qty: float) -> float:
-    qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G']
-    qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL']
-    qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO']
+    qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G', 'ZRO', 'SOMI', 'OG', 'BAKE']
+    qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL', 'SKL', 'FORM', 'KAITO', 'HIFI', 'RFC', 'HPOS10I', 'BSU']
+    qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO', 'IDEX', 'REX']
     qty_step_100_symbols = ['1000BONK', 'AKE', '1000PEPE']
     if symbol in qty_step_01_symbols:
         return round(qty, 1)
@@ -307,7 +381,7 @@ def close_all_positions_reduce_only():
         sess = getattr(client, '_session', None)
         if sess is None:
             return 0, 0
-        r = sess.get_positions(category="linear")
+        r = sess.get_positions(category="linear", settleCoin="USDT")
         closed, errors = 0, 0
         for p in (r.get('result', {}) or {}).get('list', []) or []:
             size = float(p.get('size') or 0)
@@ -322,12 +396,26 @@ def close_all_positions_reduce_only():
                 close_side = 'Buy'; idx = 2
             qty = _round_qty_for_symbol(symbol, size)
             try:
+                # Approx exit price before sending market order (for analytics only)
+                exit_price = 0.0
+                try:
+                    t = sess.get_tickers(category="linear", symbol=full_symbol)
+                    if t.get('retCode') == 0:
+                        lst = (t.get('result', {}) or {}).get('list', [])
+                        if lst:
+                            exit_price = float(lst[0].get('lastPrice') or 0)
+                except Exception:
+                    pass
                 resp = sess.place_order(
                     category="linear", symbol=full_symbol, side=close_side,
                     orderType="Market", qty=str(qty), timeInForce="IOC",
                     reduceOnly=True, positionIdx=idx)
                 if resp.get('retCode') == 0:
                     closed += 1
+                    try:
+                        log_event('close_position', {'symbol': symbol, 'side': close_side, 'qty': qty, 'ok': True, 'exit_price': exit_price})
+                    except Exception:
+                        pass
                 else:
                     resp2 = sess.place_order(
                         category="linear", symbol=full_symbol, side=close_side,
@@ -335,9 +423,17 @@ def close_all_positions_reduce_only():
                         reduceOnly=True)
                     if resp2.get('retCode') == 0:
                         closed += 1
+                        try:
+                            log_event('close_position', {'symbol': symbol, 'side': close_side, 'qty': qty, 'ok': True, 'path': 'fallback', 'exit_price': exit_price})
+                        except Exception:
+                            pass
                     else:
                         errors += 1
                         print(f"[CLOSE-ALL] {symbol} fail: {resp2.get('retMsg')}")
+                        try:
+                            log_event('close_position', {'symbol': symbol, 'side': close_side, 'qty': qty, 'ok': False, 'err': resp2.get('retMsg'), 'exit_price': exit_price})
+                        except Exception:
+                            pass
             except Exception as e:
                 errors += 1
                 print(f"[CLOSE-ALL] {symbol} exception: {e}")
@@ -355,7 +451,7 @@ def reduce_positions_by_fraction(frac: float):
         sess = getattr(client, '_session', None)
         if sess is None:
             return 0, 0
-        r = sess.get_positions(category="linear")
+        r = sess.get_positions(category="linear", settleCoin="USDT")
         reduced, errors = 0, 0
         for p in (r.get('result', {}) or {}).get('list', []) or []:
             size = float(p.get('size') or 0)
@@ -371,12 +467,26 @@ def reduce_positions_by_fraction(frac: float):
             close_side = 'Sell' if side == 'buy' else 'Buy'
             idx = 1 if side == 'buy' else 2
             try:
+                # Approx exit price before sending market order (for analytics only)
+                exit_price = 0.0
+                try:
+                    t = sess.get_tickers(category="linear", symbol=full_symbol)
+                    if t.get('retCode') == 0:
+                        lst = (t.get('result', {}) or {}).get('list', [])
+                        if lst:
+                            exit_price = float(lst[0].get('lastPrice') or 0)
+                except Exception:
+                    pass
                 resp = sess.place_order(
                     category="linear", symbol=full_symbol, side=close_side,
                     orderType="Market", qty=str(qty), timeInForce="IOC",
                     reduceOnly=True, positionIdx=idx)
                 if resp.get('retCode') == 0:
                     reduced += 1
+                    try:
+                        log_event('reduce_position', {'symbol': symbol, 'side': close_side, 'qty': qty, 'ok': True, 'exit_price': exit_price})
+                    except Exception:
+                        pass
                 else:
                     resp2 = sess.place_order(
                         category="linear", symbol=full_symbol, side=close_side,
@@ -384,9 +494,17 @@ def reduce_positions_by_fraction(frac: float):
                         reduceOnly=True)
                     if resp2.get('retCode') == 0:
                         reduced += 1
+                        try:
+                            log_event('reduce_position', {'symbol': symbol, 'side': close_side, 'qty': qty, 'ok': True, 'path': 'fallback', 'exit_price': exit_price})
+                        except Exception:
+                            pass
                     else:
                         errors += 1
                         print(f"[REDUCE] {symbol} fail: {resp2.get('retMsg')}")
+                        try:
+                            log_event('reduce_position', {'symbol': symbol, 'side': close_side, 'qty': qty, 'ok': False, 'err': resp2.get('retMsg'), 'exit_price': exit_price})
+                        except Exception:
+                            pass
             except Exception as e:
                 errors += 1
                 print(f"[REDUCE] {symbol} exception: {e}")
@@ -424,6 +542,14 @@ def check_positions(symbol):
             pm_positions = pm_state.get("positions", pm_state if isinstance(pm_state, dict) else {})
             if isinstance(pm_positions, dict) and symbol in pm_positions:
                 skip_if_managed = True
+        # Also skip symbols declared as long-term (LT-Bracket)
+        lt_path = Path("../longterm_allowlist.json")
+        if lt_path.exists():
+            with open(lt_path, 'r') as f:
+                lt_list = _json.load(f)
+            if isinstance(lt_list, list) and symbol in lt_list:
+                print(f"[SKIP LT] {symbol} is managed by LT-Bracket (serverless)")
+                return None
     except Exception as e:
         print(f"[PM_CHECK] Error checking PM state: {e}")
 
@@ -603,6 +729,15 @@ def set_tp(symbol, size, side):
         order = client.LinearOrder.LinearOrder_new(side=tp_side, symbol=symbol + "USDT", order_type="Limit", qty=actual_size,
                                            price=tp_price, time_in_force="GoodTillCancel",
                                            reduce_only=True, close_on_trigger=False).result()
+        try:
+            log_event('tp_set', {
+                'symbol': symbol,
+                'side': tp_side,
+                'price': tp_price,
+                'qty': float(actual_size) if isinstance(actual_size, (int,float)) else actual_size,
+            })
+        except Exception:
+            pass
         return order
 
     except Exception as e:
@@ -625,6 +760,10 @@ def set_sl(symbol, size, side):
             pass
 
         if has_active_sl:
+            try:
+                log_event('sl_exists', {'symbol': symbol})
+            except Exception:
+                pass
             return {"ret_msg": "SL already exists"}
 
         prices = fetch_stop_price(symbol, side)
@@ -685,6 +824,16 @@ def set_sl(symbol, size, side):
             close_on_trigger=False,
             trigger_direction=trigger_direction  # Pass explicit trigger direction
         ).result()
+        try:
+            log_event('sl_set', {
+                'symbol': symbol,
+                'side': sl_side,
+                'trigger_price': trigger_price,
+                'qty': float(actual_size) if isinstance(actual_size, (int,float)) else actual_size,
+                'trigger_direction': trigger_direction,
+            })
+        except Exception:
+            pass
 
         return order
 
@@ -735,6 +884,9 @@ print()
 LAST_STATE = {}
 LAST_SET_TS = {}
 IDEMPOTENCY_COOLDOWN_SEC = 45
+LAST_SNAPSHOT_TS = 0.0
+SNAPSHOT_INTERVAL_SEC = 300
+
 while True:
     print("Checking for Positions.........")
     # =========================
@@ -750,6 +902,19 @@ while True:
             daily_usd = 0.0
             daily_pct = 0.0
 
+        # If trading already stopped today, enforce idle (no spam)
+        day_state = _load_daily_state()
+        if day_state.get('date') == _utc_date_str() and day_state.get('stopped'):
+            # Ensure flag exists and throttle messages
+            try:
+                if not os.path.exists('../trading_disabled.flag'):
+                    Path('../trading_disabled.flag').write_text('1')
+            except Exception:
+                pass
+            # Sleep and skip rest of loop
+            sleep(settings['cooldown'])
+            continue
+
         # IM% monitoring (alerts and auto-reduce)
         im_pct = compute_im_percent(client)
         now_ts = time.time()
@@ -764,25 +929,35 @@ while True:
             globals()['_LAST_IM_REDUCE'] = now_ts
 
         # Daily stop/target
-        target_pct = float(settings.get('risk_management', {}).get('daily_target_pct', 10))
-        max_dd_pct = float(settings.get('risk_management', {}).get('daily_max_dd_pct', 5))
+        target_pct, max_dd_pct = load_risk_thresholds()
 
         if daily_pct >= target_pct:
             c_ok, c_err = close_all_positions_reduce_only()
             send_telegram(f"🎯 Daily profit target hit (+{daily_pct:.1f}%). Closed all ({c_ok} OK/{c_err} Err) and stopped.")
+            log_event('daily_target_hit', {"daily_pct": daily_pct, "daily_usd": daily_usd, "closed_ok": c_ok, "closed_err": c_err})
             log_pnl_csv(daily_pct, daily_usd)
-            # Disable trading, then idle
+            set_trading_stopped_today('target', daily_pct, daily_usd)
             sleep(settings['cooldown'])
             continue
         if daily_pct <= -max_dd_pct:
             c_ok, c_err = close_all_positions_reduce_only()
             send_telegram(f"🛑 Daily stop-loss hit ({daily_pct:.1f}%). Closed all ({c_ok} OK/{c_err} Err) and stopped.")
+            log_event('daily_stop_loss', {"daily_pct": daily_pct, "daily_usd": daily_usd, "closed_ok": c_ok, "closed_err": c_err})
             log_pnl_csv(daily_pct, daily_usd)
+            set_trading_stopped_today('max_dd', daily_pct, daily_usd)
             sleep(settings['cooldown'])
             continue
 
         # Update closed trades counter (for CSV)
         update_closed_trades_counter()
+
+        # Periodic analytics snapshot (equity, IM%, open positions)
+        try:
+            if (time.time() - LAST_SNAPSHOT_TS) >= SNAPSHOT_INTERVAL_SEC:
+                snapshot_state(equity_now, daily_pct, im_pct)
+                LAST_SNAPSHOT_TS = time.time()
+        except Exception as e:
+            print(f"[SNAPSHOT] loop error: {e}")
     except Exception as e:
         print(f"[DAILY/IM] error: {e}")
 
@@ -805,6 +980,16 @@ while True:
                 last_ts = LAST_SET_TS.get(symbol, 0)
                 unchanged = prev == (position['side'], position['size'])
                 recent = (time.time() - last_ts) < IDEMPOTENCY_COOLDOWN_SEC
+                if not unchanged:
+                    try:
+                        log_event('position_open_or_change', {
+                            'symbol': symbol,
+                            'side': position['side'],
+                            'qty': position['size'],
+                            'entry_price': float(position.get('entry_price') or 0),
+                        })
+                    except Exception:
+                        pass
                 if unchanged and recent:
                     print(f"[TP/SL] already set recently for {symbol}, skip")
                     continue

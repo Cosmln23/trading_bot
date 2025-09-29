@@ -40,6 +40,21 @@ def load_telegram_config():
         print(f"[TELEGRAM] Config load error: {e}")
         return False
 
+def load_longterm_allowlist() -> Set[str]:
+    """Load long-term symbols that should use LT-Bracket mode and be ignored by manager."""
+    try:
+        path = Path("../longterm_allowlist.json")
+        if not path.exists():
+            return set()
+        with open(path, 'r') as f:
+            data = json.load(f)
+        if isinstance(data, list):
+            return set(str(s).upper() for s in data)
+        return set()
+    except Exception as e:
+        print(f"[LT] load error: {e}")
+        return set()
+
 async def send_telegram(message: str):
     """Send message to Telegram asynchronously"""
     if not TELEGRAM_BOT_TOKEN or not TELEGRAM_CHAT_ID:
@@ -326,9 +341,9 @@ def place_buy_order(client, cfg: Dict, symbol: str, price: float) -> bool:
         qty = cfg["buy_amount_usdt"] / price
 
         # Quantity precision per symbol groups
-        qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G']
-        qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL']
-        qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO']
+        qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G', 'ZRO', 'SOMI', 'OG', 'BAKE']
+        qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL', 'SKL', 'FORM', 'KAITO', 'HIFI', 'RFC', 'HPOS10I', 'BSU']
+        qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO', 'IDEX', 'REX']
         qty_step_100_symbols = ['1000BONK', 'AKE', '1000PEPE']
 
         if symbol in qty_step_01_symbols:
@@ -403,9 +418,9 @@ def place_sell_order(client, symbol: str, qty: float, reason: str) -> bool:
             position_idx = 2  # short
 
         # Quantity step constraints
-        qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G']
-        qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL']
-        qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO']
+        qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G', 'ZRO', 'SOMI', 'OG', 'BAKE']
+        qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL', 'SKL', 'FORM', 'KAITO', 'HIFI', 'RFC', 'HPOS10I', 'BSU']
+        qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO', 'IDEX', 'REX']
         qty_step_100_symbols = ['1000BONK', 'AKE', '1000PEPE']
 
         # Floor to symbol step and ensure <= available
@@ -441,9 +456,55 @@ def place_sell_order(client, symbol: str, qty: float, reason: str) -> bool:
         if result.get('retCode') == 0:
             print(f"[SELL] {symbol}: qty={q} reason={reason} (side={close_side}, idx={position_idx})")
             return True
-        print(f"[SELL_FAIL] {symbol}: {result.get('retMsg')}")
+        # Fallback for one-way mode (positionIdx mismatch)
+        msg = str(result.get('retMsg', ''))
+        if result.get('retCode') == 10001 or 'position idx' in msg.lower():
+            try:
+                result2 = client._session.place_order(
+                    category="linear",
+                    symbol=f"{symbol}USDT",
+                    side=close_side,
+                    orderType="Market",
+                    qty=str(q),
+                    timeInForce="IOC",
+                    reduceOnly=True,
+                    orderLinkId=order_link_id,
+                )
+                if result2.get('retCode') == 0:
+                    print(f"[SELL] {symbol}: qty={q} reason={reason} (fallback no positionIdx)")
+                    return True
+                else:
+                    print(f"[SELL_FAIL] {symbol}: {result2.get('retMsg')}")
+                    return False
+            except Exception as e:
+                print(f"[SELL_FAIL] {symbol}: fallback exception {e}")
+                return False
+        print(f"[SELL_FAIL] {symbol}: {msg}")
         return False
     except Exception as e:
+        # Some clients raise immediately on positionIdx mismatch in One-Way mode
+        emsg = str(e).lower()
+        try:
+            if 'position idx' in emsg or '10001' in emsg:
+                result2 = client._session.place_order(
+                    category="linear",
+                    symbol=f"{symbol}USDT",
+                    side=close_side,
+                    orderType="Market",
+                    qty=str(q),
+                    timeInForce="IOC",
+                    reduceOnly=True,
+                    orderLinkId=f"PM-{symbol}-{int(time.time())}",
+                )
+                if result2.get('retCode') == 0:
+                    print(f"[SELL] {symbol}: qty={q} reason={reason} (fallback-exc no positionIdx)")
+                    return True
+                else:
+                    print(f"[SELL_FAIL] {symbol}: {result2.get('retMsg')}")
+                    return False
+        except Exception as e2:
+            print(f"[SELL_FAIL] {symbol}: fallback-exc exception {e2}")
+            return False
         print(f"[SELL_FAIL] {symbol}: Exception: {e}")
         return False
 
@@ -501,6 +562,7 @@ def main():
     positions: Dict[str, Dict] = state.setdefault('positions', {})
     cooldowns: Dict[str, float] = state.setdefault('cooldowns', {})
     allowlist = load_allowlist()
+    lt_allow = load_longterm_allowlist()
 
     print(f"📊 Config: ${cfg['buy_amount_usdt']}/trade, max {cfg['max_open_positions']} positions")
     print(f"📋 Allowlist: {len(allowlist)} symbols loaded")
@@ -616,6 +678,14 @@ def main():
                         price = last_price(client, symbol)
                         if price <= 0:
                             print(f"[PRICE] {symbol}: unable to fetch price, skipping")
+                            continue
+
+                        # LT-Bracket mode: if symbol declared long-term, buy with on-exchange TP/SL and do not manage further
+                        if symbol in lt_allow:
+                            if place_buy_order_lt(client, cfg, symbol, price):
+                                entries_found += 1
+                                portfolio_invested += cfg['buy_amount_usdt']
+                                remaining_budget = max(0.0, effective_budget - portfolio_invested)
                             continue
 
                         if place_buy_order(client, cfg, symbol, price):

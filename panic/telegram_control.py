@@ -12,9 +12,13 @@ import signal
 import os
 import time
 from typing import Dict, Any
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 import sys
+try:
+    import requests  # used for quick health checks
+except Exception:
+    requests = None
 
 class TelegramBotControl:
     """Handles Telegram commands for bot control."""
@@ -104,6 +108,9 @@ class TelegramBotControl:
 
             for pid in pids:
                 try:
+                    if bot_type == 'portfolio':
+                        # Keep portfolio manager running on /kill
+                        continue
                     # Send SIGTERM first (graceful shutdown)
                     os.kill(int(pid), signal.SIGTERM)
                     result["killed"][bot_type].append(pid)
@@ -124,6 +131,8 @@ class TelegramBotControl:
         for bot_type, pids in processes.items():
             for pid in pids:
                 try:
+                    if bot_type == 'portfolio':
+                        continue
                     # Check if still running
                     os.kill(int(pid), 0)  # Doesn't actually kill, just checks
                     # Still running, force kill
@@ -138,24 +147,133 @@ class TelegramBotControl:
         return result
 
     def get_status_report(self) -> str:
-        """Get current status of all bots."""
+        """Get enriched status for all systems (processes + trading + health)."""
         processes = self.get_bot_processes()
 
+        # Trading flags
+        trading_flag = Path('trading_disabled.flag').exists()
+        panic_lock = Path('state/panic.lock')
+        panic_active = False
+        try:
+            if panic_lock.exists():
+                with open(panic_lock, 'r') as f:
+                    j = json.load(f)
+                panic_active = bool(j.get('panic_tripped', False))
+        except Exception:
+            panic_active = False
+
+        # Panic server health
+        panic_health = 'disabled'
+
+        # Daily PnL state
+        realized = 0.0
+        stopped = False
+        try:
+            with open('state/daily_pnl.json', 'r') as f:
+                st = json.load(f)
+            # use today if present
+            today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+            d = st.get(today) if isinstance(st.get(today, None), dict) else st
+            realized = float(d.get('realized', 0.0))
+            stopped = bool(d.get('stopped', False))
+        except Exception:
+            pass
+
+        # Snapshot (equity / IM%)
+        snap_equity = None
+        snap_im = None
+        try:
+            from pathlib import Path as _P
+            day = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+            p = _P('logs') / 'snapshots' / f'{day}.jsonl'
+            if p.exists():
+                last = None
+                with open(p, 'r') as f:
+                    for line in f:
+                        if line.strip():
+                            last = line
+                if last:
+                    j = json.loads(last)
+                    snap_equity = j.get('equity')
+                    snap_im = j.get('im_pct')
+        except Exception:
+            pass
+
+        # Portfolio positions in state
+        pm_positions = 0
+        try:
+            with open('BybitUSDT/portfolio_state.json', 'r') as f:
+                st = json.load(f)
+            if isinstance(st, dict):
+                pm_positions = len(st.get('positions', {}) or {})
+        except Exception:
+            pass
+
+        # LT allowlist count
+        lt_count = 0
+        try:
+            with open('longterm_allowlist.json', 'r') as f:
+                j = json.load(f)
+            if isinstance(j, list):
+                lt_count = len(j)
+        except Exception:
+            pass
+
+        # Risk thresholds from settings.json
+        risk_line = None
+        try:
+            with open('settings.json', 'r') as f:
+                cfg = json.load(f)
+            rm = cfg.get('risk_management', {}) or {}
+            tgt = rm.get('daily_target_pct')
+            dd = rm.get('daily_max_dd_pct')
+            eq = rm.get('equity_usdt')
+            parts = []
+            if tgt is not None:
+                parts.append(f"target {float(tgt):.2f}%")
+            if dd is not None:
+                parts.append(f"maxDD {float(dd):.2f}%")
+            if eq is not None:
+                parts.append(f"equity {float(eq):.0f}")
+            if parts:
+                risk_line = " | ".join(parts)
+        except Exception:
+            risk_line = None
+
+        # Build status lines
         status_lines = [
             "🤖 <b>Bot Status Report</b>",
             f"📅 Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
-            "─────────────────"
+            "─────────────────",
         ]
 
+        # Processes
         for bot_type, pids in processes.items():
             emoji = "✅" if pids else "❌"
             bot_name = bot_type.replace('_', ' ').title()
             count = len(pids)
+            status_lines.append(f"{emoji} {bot_name}: {count} proc")
 
-            if count > 0:
-                status_lines.append(f"{emoji} {bot_name}: {count} process(es) running")
-            else:
-                status_lines.append(f"{emoji} {bot_name}: Not running")
+        # Trading state
+        tstate = 'DISABLED' if trading_flag or panic_active else 'ENABLED'
+        status_lines.append(f"🟦 Trading: {tstate}")
+        if panic_active:
+            status_lines.append("   PANIC: active")
+
+        # Panic server
+        status_lines.append(f"🖥️ Panic Server: {panic_health}")
+
+        # Portfolio/LongTerm
+        status_lines.append(f"📈 Portfolio positions (PM): {pm_positions}")
+        status_lines.append(f"🏷️ LT allowlist: {lt_count} symbol(e)")
+        if risk_line:
+            status_lines.append(f"🛡️ Risk: {risk_line}")
+
+        # Daily PnL + snapshot
+        status_lines.append(f"💰 Daily PnL: {realized:+.2f} USDT | Stopped: {stopped}")
+        if snap_equity is not None:
+            im_str = f" | IM% {snap_im:.1f}%" if isinstance(snap_im, (int, float)) else ""
+            status_lines.append(f"📊 Snapshot equity: {snap_equity:.2f}{im_str}")
 
         return "\n".join(status_lines)
 
@@ -240,40 +358,57 @@ class TelegramBotControl:
         """
         await self.send_message("🚨 <b>CLOSE ALL POSITIONS</b>\n\nAttempting to flatten all positions...")
 
-        # 1) Try Panic Server
-        try:
-            async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=5)) as session:
-                resp = await session.post('http://127.0.0.1:8787/panic')
-                if resp.status == 200:
-                    data = await resp.json()
-                    await self.send_message("✅ <b>ALL POSITIONS CLOSED via Panic Server</b>\n🔒 Trading disabled.")
-                    return
-                else:
-                    txt = await resp.text()
-                    print(f"[CONTROL] Panic server close failed: {resp.status} {txt}")
-        except Exception as e:
-            print(f"[CONTROL] Panic server not available: {e}")
+        # Panic server integration disabled; proceed with direct Bybit close.
 
-        # 2) Fallback: direct close via Bybit
+        # Direct close via Bybit
         client = self._init_bybit_client()
         if client is None:
             await self.send_message("❌ Could not initialize Bybit client for fallback close.")
             return
 
         try:
-            resp = client._session.get_positions(category="linear")
+            resp = client._session.get_positions(category="linear", settleCoin="USDT")
             if resp.get('retCode') != 0:
                 await self.send_message(f"❌ Positions API error: {resp.get('retMsg')}")
                 return
 
             closed = 0
             errors = 0
+            details = []
+
+            def _floor_qty(symbol_full: str, size: float) -> float:
+                try:
+                    info = client._session.get_instruments_info(category="linear", symbol=symbol_full)
+                    if info.get('retCode') == 0:
+                        lst = (info.get('result', {}) or {}).get('list', [])
+                        if lst:
+                            it = lst[0]
+                            step = float((it.get('lotSizeFilter', {}) or {}).get('qtyStep') or 0) or 1.0
+                            if step > 0:
+                                return max(0.0, (int(size / step)) * step)
+                except Exception:
+                    pass
+                return size
+            # Optional: skip long-term symbols (LT-Bracket)
+            lt_symbols = set()
+            try:
+                import json as _json
+                with open('longterm_allowlist.json', 'r') as f:
+                    j = _json.load(f)
+                    if isinstance(j, list):
+                        lt_symbols = set(j)
+            except Exception:
+                pass
             for pos in (resp.get('result', {}) or {}).get('list', []) or []:
                 size = float(pos.get('size') or 0)
                 if size <= 0:
                     continue
                 symbol = pos.get('symbol', '')
                 side = str(pos.get('side','')).lower()
+                base = symbol.replace('USDT', '')
+                if base in lt_symbols:
+                    print(f"[CONTROL] Skip LT symbol at close-all: {symbol}")
+                    continue
                 # Determine close
                 if side == 'buy':
                     close_side = 'Sell'
@@ -283,26 +418,77 @@ class TelegramBotControl:
                     idx = 2
 
                 try:
+                    # Align quantity to exchange step and avoid over-closing
+                    qty = _floor_qty(symbol, size)
+                    if qty <= 0:
+                        details.append(f"SKIP {symbol}: qty too small after step floor ({size})")
+                        continue
                     r = client._session.place_order(
                         category="linear",
                         symbol=symbol,
                         side=close_side,
                         orderType="Market",
-                        qty=str(size),
+                        qty=str(qty),
                         timeInForce="IOC",
                         reduceOnly=True,
                         positionIdx=idx
                     )
                     if r.get('retCode') == 0:
                         closed += 1
+                        details.append(f"OK {symbol} {close_side} qty={qty}")
                     else:
-                        errors += 1
-                        print(f"[CONTROL] Close fail {symbol}: {r.get('retMsg')}")
+                        # Fallback without positionIdx for one-way accounts
+                        r2 = client._session.place_order(
+                            category="linear",
+                            symbol=symbol,
+                            side=close_side,
+                            orderType="Market",
+                            qty=str(qty),
+                            timeInForce="IOC",
+                            reduceOnly=True,
+                        )
+                        if r2.get('retCode') == 0:
+                            closed += 1
+                            details.append(f"OK {symbol} {close_side} qty={qty} (fallback)")
+                        else:
+                            errors += 1
+                            em = r2.get('retMsg')
+                            print(f"[CONTROL] Close fail {symbol}: {em}")
+                            details.append(f"ERR {symbol}: {em}")
                 except Exception as e:
+                    # Some clients raise instead of returning retCode for 10001 (positionIdx mismatch)
+                    msg = str(e).lower()
+                    try:
+                        if 'position idx' in msg or '10001' in msg:
+                            r2 = client._session.place_order(
+                                category="linear",
+                                symbol=symbol,
+                                side=close_side,
+                                orderType="Market",
+                                qty=str(qty),
+                                timeInForce="IOC",
+                                reduceOnly=True,
+                            )
+                            if r2.get('retCode') == 0:
+                                closed += 1
+                                details.append(f"OK {symbol} {close_side} qty={qty} (fallback-exc)")
+                                continue
+                            else:
+                                em = r2.get('retMsg')
+                                errors += 1
+                                print(f"[CONTROL] Close fail {symbol}: {em}")
+                                details.append(f"ERR {symbol}: {em}")
+                                continue
+                    except Exception as e2:
+                        print(f"[CONTROL] Fallback exception {symbol}: {e2}")
+                        details.append(f"ERR {symbol}: fallback {e2}")
+                    # Generic error path
                     errors += 1
                     print(f"[CONTROL] Close exception {symbol}: {e}")
+                    details.append(f"ERR {symbol}: {e}")
 
-            msg = f"✅ <b>CLOSE ALL COMPLETED</b>\n✔️ Closed: {closed}\n❗ Errors: {errors}"
+            extra = "\n" + "\n".join(details[:12]) if details else ""
+            msg = f"✅ <b>CLOSE ALL COMPLETED</b>\n✔️ Closed: {closed}\n❗ Errors: {errors}{extra}"
             await self.send_message(msg)
         except Exception as e:
             await self.send_message(f"❌ Exception during close-all: {e}")

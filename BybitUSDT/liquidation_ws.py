@@ -123,7 +123,7 @@ def compute_im_percent():
             pass
         # Fallback sum over positions
         im_sum = 0.0
-        rp = sess.get_positions(category="linear")
+        rp = sess.get_positions(category="linear", settleCoin="USDT")
         for p in (rp.get('result', {}) or {}).get('list', []) or []:
             size = float(p.get('size') or 0)
             if size <= 0:
@@ -334,6 +334,20 @@ def place_order(symbol, side, ticker, size):
         print(f'[RISK-GUARD] New entries disabled - skipping {symbol} {side} order')
         return
 
+    # LT-Bracket: skip symbols declared long-term
+    try:
+        from pathlib import Path as _Path
+        import json as _json
+        lt_path = _Path("../longterm_allowlist.json")
+        if lt_path.exists():
+            with open(lt_path, 'r') as f:
+                lt_list = _json.load(f)
+            if isinstance(lt_list, list) and symbol in lt_list:
+                print(f"[SKIP WL] {symbol} is in longterm allowlist (LT-Bracket)")
+                return
+    except Exception:
+        pass
+
     # Check panic button system integration
     if not check_panic_trading_enabled():
         print(f'[PANIC] Trading disabled by panic button - skipping {symbol} {side} order')
@@ -384,9 +398,9 @@ def place_order(symbol, side, ticker, size):
     size, notional, adjusted = ensure_min_notional(size, ticker)
 
     # Fix quantity precision based on qtyStep requirements
-    qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G']  # qtyStep=0.1
-    qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL']  # qtyStep=1
-    qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO']  # qtyStep=10
+    qty_step_01_symbols = ['XRP', 'DOT', 'UNI', 'SOL', 'LINK', 'FIL', 'EOS', 'APEX', 'BARD', 'ALPINE', 'WLD', 'SNX', 'BAND', 'MIRA', 'QTUM', 'W', '0G', 'ZRO', 'SOMI', 'OG', 'BAKE']  # qtyStep=0.1
+    qty_step_1_symbols = ['ADA', 'DOGE', 'MATIC', 'XLM', 'XPL', 'SQD', 'FARTCOIN', 'MYX', 'ORDER', 'SOLV', 'AIA', 'ASTER', 'HEMI', 'TA', 'AVNT', 'DOLO', 'MAV', 'PLUME', 'OPEN', 'STBL', 'SKL', 'FORM', 'KAITO', 'HIFI', 'RFC', 'HPOS10I', 'BSU']  # qtyStep=1
+    qty_step_10_symbols = ['PENGU', 'LINEA', 'BLESS', 'MEME', 'H', 'SUN', 'AIO', 'IDEX', 'REX']  # qtyStep=10
     qty_step_100_symbols = ['1000BONK', 'AKE', '1000PEPE']  # qtyStep=100
 
     if symbol in qty_step_01_symbols:

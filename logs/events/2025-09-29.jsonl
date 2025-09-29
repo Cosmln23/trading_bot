@@ -1,0 +1,85 @@
+{"ts": "2025-09-29T00:42:42.646816+00:00", "event": "position_open_or_change", "symbol": "HIFI", "side": "Buy", "qty": 850.0, "entry_price": 0.13814689}
+{"ts": "2025-09-29T00:42:45.921087+00:00", "event": "tp_set", "symbol": "HIFI", "side": "Sell", "price": 0.1416, "qty": 850.0}
+{"ts": "2025-09-29T00:42:47.250660+00:00", "event": "sl_set", "symbol": "HIFI", "side": "Sell", "trigger_price": 0.134, "qty": 850.0, "trigger_direction": 2}
+{"ts": "2025-09-29T00:43:03.228251+00:00", "event": "position_open_or_change", "symbol": "AKE", "side": "Sell", "qty": 68600.0, "entry_price": 0.001719}
+{"ts": "2025-09-29T00:43:05.895831+00:00", "event": "tp_set", "symbol": "AKE", "side": "Buy", "price": 0.001676, "qty": 68600.0}
+{"ts": "2025-09-29T00:43:07.220837+00:00", "event": "sl_set", "symbol": "AKE", "side": "Buy", "trigger_price": 0.002, "qty": 68600.0, "trigger_direction": 1}
+{"ts": "2025-09-29T00:57:31.172503+00:00", "event": "position_open_or_change", "symbol": "LINEA", "side": "Sell", "qty": 4070.0, "entry_price": 0.02884649}
+{"ts": "2025-09-29T00:57:34.908583+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T00:57:36.229007+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T00:58:33.549363+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T00:58:34.869409+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T00:58:35.476981+00:00", "event": "position_open_or_change", "symbol": "AIA", "side": "Sell", "qty": 330.0, "entry_price": 0.35586758}
+{"ts": "2025-09-29T00:58:38.408747+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T00:58:39.737900+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.366, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T00:59:36.162819+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T00:59:37.488628+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T00:59:41.879730+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T00:59:43.208424+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.367, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:00:39.126944+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T01:00:40.454038+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:00:44.813731+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T01:00:46.139726+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.364, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:01:43.274650+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T01:01:44.606487+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:01:44.803694+00:00", "event": "position_open_or_change", "symbol": "BLESS", "side": "Sell", "qty": 2810.0, "entry_price": 0.04178854}
+{"ts": "2025-09-29T01:01:47.926455+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.04074, "qty": 2810.0}
+{"ts": "2025-09-29T01:01:49.240700+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.043, "qty": 2810.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:01:53.360424+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T01:01:54.682891+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.364, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:02:31.298044+00:00", "event": "position_open_or_change", "symbol": "KAITO", "side": "Buy", "qty": 87.0, "entry_price": 1.3554}
+{"ts": "2025-09-29T01:02:35.355744+00:00", "event": "tp_set", "symbol": "KAITO", "side": "Sell", "price": 1.3893, "qty": 87.0}
+{"ts": "2025-09-29T01:02:36.994677+00:00", "event": "sl_set", "symbol": "KAITO", "side": "Sell", "trigger_price": 1.31, "qty": 87.0, "trigger_direction": 2}
+{"ts": "2025-09-29T01:02:55.871225+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T01:02:57.193180+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:03:01.168606+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.04074, "qty": 2810.0}
+{"ts": "2025-09-29T01:03:02.491462+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.043, "qty": 2810.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:03:05.851702+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T01:03:07.171870+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.362, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:03:48.343965+00:00", "event": "tp_set", "symbol": "KAITO", "side": "Sell", "price": 1.3893, "qty": 87.0}
+{"ts": "2025-09-29T01:03:49.668075+00:00", "event": "sl_set", "symbol": "KAITO", "side": "Sell", "trigger_price": 1.316, "qty": 87.0, "trigger_direction": 2}
+{"ts": "2025-09-29T01:04:07.646586+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T01:04:08.976166+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:04:12.810131+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.04074, "qty": 2810.0}
+{"ts": "2025-09-29T01:04:14.132618+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.044, "qty": 2810.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:04:18.422875+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T01:04:19.748067+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.364, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:05:02.101123+00:00", "event": "tp_set", "symbol": "KAITO", "side": "Sell", "price": 1.3893, "qty": 87.0}
+{"ts": "2025-09-29T01:05:03.431822+00:00", "event": "sl_set", "symbol": "KAITO", "side": "Sell", "trigger_price": 1.316, "qty": 87.0, "trigger_direction": 2}
+{"ts": "2025-09-29T01:05:21.771701+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T01:05:23.091011+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:05:26.766321+00:00", "event": "tp_set", "symbol": "BLESS", "side": "Buy", "price": 0.04074, "qty": 2810.0}
+{"ts": "2025-09-29T01:05:28.090131+00:00", "event": "sl_set", "symbol": "BLESS", "side": "Buy", "trigger_price": 0.044, "qty": 2810.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:05:32.050987+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T01:05:33.372092+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.364, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:06:14.367173+00:00", "event": "tp_set", "symbol": "KAITO", "side": "Sell", "price": 1.3893, "qty": 87.0}
+{"ts": "2025-09-29T01:06:15.712271+00:00", "event": "sl_set", "symbol": "KAITO", "side": "Sell", "trigger_price": 1.316, "qty": 87.0, "trigger_direction": 2}
+{"ts": "2025-09-29T01:06:34.140194+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T01:06:35.457488+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:06:40.121495+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T01:06:41.776862+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.365, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:07:05.313487+00:00", "event": "position_open_or_change", "symbol": "WLD", "side": "Sell", "qty": 87.6, "entry_price": 1.33568938}
+{"ts": "2025-09-29T01:07:09.027532+00:00", "event": "tp_set", "symbol": "WLD", "side": "Buy", "price": 1, "qty": 87.6}
+{"ts": "2025-09-29T01:07:10.352800+00:00", "event": "sl_set", "symbol": "WLD", "side": "Buy", "trigger_price": 1.377, "qty": 87.6, "trigger_direction": 1}
+{"ts": "2025-09-29T01:07:26.924310+00:00", "event": "tp_set", "symbol": "KAITO", "side": "Sell", "price": 1.3893, "qty": 87.0}
+{"ts": "2025-09-29T01:07:28.240797+00:00", "event": "sl_set", "symbol": "KAITO", "side": "Sell", "trigger_price": 1.316, "qty": 87.0, "trigger_direction": 2}
+{"ts": "2025-09-29T01:07:47.102306+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T01:07:48.446423+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:07:52.688477+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T01:07:54.026417+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.367, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:08:21.191452+00:00", "event": "tp_set", "symbol": "WLD", "side": "Buy", "price": 1, "qty": 87.6}
+{"ts": "2025-09-29T01:08:22.508019+00:00", "event": "sl_set", "symbol": "WLD", "side": "Buy", "trigger_price": 1.378, "qty": 87.6, "trigger_direction": 1}
+{"ts": "2025-09-29T01:08:32.558197+00:00", "event": "position_open_or_change", "symbol": "STBL", "side": "Sell", "qty": 274.0, "entry_price": 0.42634536}
+{"ts": "2025-09-29T01:08:36.807577+00:00", "event": "sl_set", "symbol": "STBL", "side": "Buy", "trigger_price": 0.441, "qty": 274.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:08:43.016814+00:00", "event": "tp_set", "symbol": "KAITO", "side": "Sell", "price": 1.3893, "qty": 87.0}
+{"ts": "2025-09-29T01:08:44.339360+00:00", "event": "sl_set", "symbol": "KAITO", "side": "Sell", "trigger_price": 1.321, "qty": 87.0, "trigger_direction": 2}
+{"ts": "2025-09-29T01:09:03.427534+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
+{"ts": "2025-09-29T01:09:04.749495+00:00", "event": "sl_set", "symbol": "LINEA", "side": "Buy", "trigger_price": 0.03, "qty": 4070.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:09:08.678174+00:00", "event": "tp_set", "symbol": "AIA", "side": "Buy", "price": 0.347, "qty": 330.0}
+{"ts": "2025-09-29T01:09:09.999052+00:00", "event": "sl_set", "symbol": "AIA", "side": "Buy", "trigger_price": 0.367, "qty": 330.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:09:36.134254+00:00", "event": "tp_set", "symbol": "WLD", "side": "Buy", "price": 1, "qty": 87.6}
+{"ts": "2025-09-29T01:09:37.454227+00:00", "event": "sl_set", "symbol": "WLD", "side": "Buy", "trigger_price": 1.377, "qty": 87.6, "trigger_direction": 1}
+{"ts": "2025-09-29T01:09:55.024657+00:00", "event": "sl_set", "symbol": "STBL", "side": "Buy", "trigger_price": 0.438, "qty": 274.0, "trigger_direction": 1}
+{"ts": "2025-09-29T01:10:02.836052+00:00", "event": "tp_set", "symbol": "KAITO", "side": "Sell", "price": 1.3893, "qty": 87.0}
+{"ts": "2025-09-29T01:10:04.173534+00:00", "event": "sl_set", "symbol": "KAITO", "side": "Sell", "trigger_price": 1.32, "qty": 87.0, "trigger_direction": 2}
+{"ts": "2025-09-29T01:10:22.570762+00:00", "event": "tp_set", "symbol": "LINEA", "side": "Buy", "price": 0.02813, "qty": 4070.0}
