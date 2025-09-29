@@ -10,6 +10,11 @@ import logging
 from unicorn_binance_websocket_api.manager import BinanceWebSocketApiManager
 from prettyprinter import pprint
 import bybitwrapper as bybitwrapper
+try:
+    from .symbol_normalize import normalize_symbol, normalize_base
+except Exception:
+    # fallback when running as script
+    from symbol_normalize import normalize_symbol, normalize_base
 from math import ceil
 from pybit.exceptions import InvalidRequestError
 
@@ -523,7 +528,13 @@ def check_liquidations():
             #pprint(data)
             try:
                 #data = {'stream': '!forceOrder@arr', 'data': {'e': 'forceOrder', 'E': 1629656323555, 'o': {'s': 'BTCUSDT', 'S': 'BUY', 'o': 'LIMIT', 'f': 'IOC', 'q': '6', 'p': '73.2212', 'ap': '80000', 'X': 'FILLED', 'l': '6', 'z': '6', 'T': 1629656323549}}}
-                symbol = data['data']['o']['s'][:-4]
+                raw = data['data']['o']['s']
+                # Normalize any known rename for display and (optionally) base
+                norm_raw = normalize_symbol(raw)
+                # Base used for matching against config
+                symbol = norm_raw.slice(0, -4)
+                # Also try base normalization (for cases where feed base differs)
+                symbol = normalize_base(symbol)
                 symbols = load_symbols(coins)
 
                 if symbol in symbols:
@@ -540,7 +551,8 @@ def check_liquidations():
 
                     if duration < 5:
                         print("---------------------------------------------------------------------------------")
-                        print("Liquidation found for:", amount, "Contracts worth: $", lick_size, "on ", symbol)
+                        disp = norm_raw
+                        print("Liquidation found for:", amount, "Contracts worth: $", lick_size, "on ", disp)
 
                         vwaps = fetch_vwap(symbol)
                         ticker = fetch_ticker(symbol)

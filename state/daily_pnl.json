@@ -7,6 +7,8 @@
   },
   "date": "2025-09-29",
   "baseline_equity": 358.66131498,
-  "num_trades": 0,
-  "stopped": false
+  "num_trades": 1,
+  "stopped": true,
+  "stop_reason": "max_dd",
+  "stop_ts": "2025-09-29T01:40:34.558402+00:00"
 }
